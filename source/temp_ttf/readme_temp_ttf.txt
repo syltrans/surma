@@ -1,0 +1,1 @@
+The files in this folder are used only in intermediate stages of a font build and are not complete working fonts for installation.
