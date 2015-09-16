@@ -1,0 +1,128 @@
+#include "stddef.gdh"
+
+/* No Glyph table. All glyph defs are in the base gdl file Surma-025-glyphs.gdl */
+/* That file then #includes this one */
+
+table(subs)
+
+/* Conjuncts */
+ga807 ga806 c_MakeConjAfterKa  > _ _ c_ConjAfterKa:(1 2 3);
+
+ga808 ga806 ga814 > _ _ ga808_a806_a814:(1 2 3);
+ga808 ga806 ga81b > _ _ ga808_a806_a81b:(1 2 3);
+ga809 ga806 ga818 > _ _ ga809_a806_a818:(1 2 3);
+ga80c ga806 ga80c > _ _ ga80c_a806_a80c:(1 2 3);
+ga80c ga806 ga80d > _ _ ga80c_a806_a80d:(1 2 3);
+ga80d ga806 ga815 > _ _ ga80d_a806_a815:(1 2 3);
+ga80e ga806 ga80e > _ _ ga80e_a806_a80e:(1 2 3);
+ga814 ga806 ga814 > _ _ ga814_a806_a814:(1 2 3);
+ga814 ga806 ga815 > _ _ ga814_a806_a815:(1 2 3);
+ga814 ga806 ga81e > _ _ ga814_a806_a81e:(1 2 3);
+ga816 ga806 ga816 > _ _ ga816_a806_a816:(1 2 3);
+ga818 ga806 ga807 > _ _ ga818_a806_a807:(1 2 3);
+ga818 ga806 ga809 > _ _ ga818_a806_a809:(1 2 3);
+ga818 ga806 ga80c > _ _ ga818_a806_a80c:(1 2 3);
+ga818 ga806 ga80d > _ _ ga818_a806_a80d:(1 2 3);
+ga818 ga806 ga80e > _ _ ga818_a806_a80e:(1 2 3);
+ga818 ga806 ga810 > _ _ ga818_a806_a810:(1 2 3);
+ga818 ga806 ga812 > _ _ ga818_a806_a812:(1 2 3);
+ga818 ga806 ga814 > _ _ ga818_a806_a814:(1 2 3);
+ga818 ga806 ga816 > _ _ ga818_a806_a816:(1 2 3);
+ga818 ga806 ga817 > _ _ ga818_a806_a817:(1 2 3);
+ga818 ga806 ga818 > _ _ ga818_a806_a818:(1 2 3);
+ga818 ga806 ga821 > _ _ ga818_a806_a821:(1 2 3);
+ga819 ga806 ga80d > _ _ ga819_a806_a80d:(1 2 3);
+ga819 ga806 ga810 > _ _ ga819_a806_a810:(1 2 3);
+ga819 ga806 ga814 > _ _ ga819_a806_a814:(1 2 3);
+ga819 ga806 ga819 > _ _ ga819_a806_a819:(1 2 3);
+ga819 ga806 ga821 > _ _ ga819_a806_a821:(1 2 3);
+ga81a ga806 ga80d > _ _ ga81a_a806_a80d:(1 2 3);
+ga81b ga806 ga816 > _ _ ga81b_a806_a816:(1 2 3);
+ga81b ga806 ga81b > _ _ ga81b_a806_a81b:(1 2 3);
+ga81d ga806 ga819 > _ _ ga81d_a806_a819:(1 2 3);
+ga81d ga806 ga81b > _ _ ga81d_a806_a81b:(1 2 3);
+ga81d ga806 ga81d > _ _ ga81d_a806_a81d:(1 2 3);
+ga81f ga806 ga81f > _ _ ga81f_a806_a81f:(1 2 3);
+ga821 ga806 ga807 > _ _ ga821_a806_a807:(1 2 3);
+ga821 ga806 ga80c > _ _ ga821_a806_a80c:(1 2 3);
+ga821 ga806 ga80d > _ _ ga821_a806_a80d:(1 2 3);
+ga821 ga806 ga810 > _ _ ga821_a806_a810:(1 2 3);
+ga821 ga806 ga811 > _ _ ga821_a806_a811:(1 2 3);
+ga821 ga806 ga814 > _ _ ga821_a806_a814:(1 2 3);
+ga821 ga806 ga815 > _ _ ga821_a806_a815:(1 2 3);
+ga821 ga806 ga81b > _ _ ga821_a806_a81b:(1 2 3);
+
+/* new conjuncts that weren't in legacy font */
+ga809 ga806 ga809 > _ _ ga809_a806_a809:(1 2 3);
+ga810 ga806 ga810 > _ _ ga810_a806_a810:(1 2 3);
+ga821 ga806 ga821 > _ _ ga821_a806_a821:(1 2 3);
+ga816 ga806 ga81e > _ _ ga816_a806_a81e:(1 2 3);
+ga81a ga806 ga814 > _ _ ga81a_a806_a814:(1 2 3);
+ga81a ga806 ga81e > _ _ ga81a_a806_a81e:(1 2 3);
+ga81a ga806 ga81f > _ _ ga81a_a806_a81f:(1 2 3);
+ga81a ga806 ga821 > _ _ ga81a_a806_a821:(1 2 3);
+ga81e ga806 ga80a > _ _ ga81e_a806_a80a:(1 2 3);
+ga81e ga806 ga814 > _ _ ga81e_a806_a814:(1 2 3);
+ga81e ga806 ga815 > _ _ ga81e_a806_a815:(1 2 3);
+ga81e ga806 ga818 > _ _ ga81e_a806_a818:(1 2 3);
+ga81e ga806 ga81b > _ _ ga81e_a806_a81b:(1 2 3);
+ga81e ga806 ga81c > _ _ ga81e_a806_a81c:(1 2 3);
+ga81e ga806 ga80c > _ _ ga81e_a806_a80c:(1 2 3);
+ga81e ga806 ga812 > _ _ ga81e_a806_a812:(1 2 3);
+ga80d ga806 ga814 > _ _ ga80d_a806_a814:(1 2 3);
+ga80d ga806 ga81e > _ _ ga80d_a806_a81e:(1 2 3);
+ga80d ga806 ga81f > _ _ ga80d_a806_a81f:(1 2 3);
+ga80d ga806 ga821 > _ _ ga80d_a806_a821:(1 2 3);
+ga80e ga806 ga81b > _ _ ga80e_a806_a81b:(1 2 3);
+
+/* half forms */
+ga806 ga814 > _ ga814_half:(1 2) / c_UseHalfTrls _ _;
+ga806 ga81e > _ ga81e_half:(1 2) / c_UseHalfTrls _ _;
+ga806 ga81f > _ ga81f_half:(1 2) / c_UseHalfTrls _ _;
+ga806 ga821 > _ ga821_half:(1 2) / c_UseHalfTrls _ _;
+
+/* stack double-ro */
+ga81e ga806 ga81e > _ ga81e ga81e_half:(1 2 3);
+
+/* pre-form of ro */
+ga81e ga806 > _ ga81e_pre:(1 2) / _ _ c_BaseChars;
+
+/* mark ligatures */
+ga826 ga80b > _ ga826_a80b:(1 2);	/* ekar+anusvara */
+ga827 ga80b > _ ga827_a80b:(1 2);	/* ookar+anusvara */ 
+ga802 ga80b > _ ga802_a80b:(1 2);	/* dvisvara+anusvara */ 
+
+/* ukar selection */
+ga825 > ga825_left / c_TakesLeftUkar _;
+ga825 > ga825_do / c_TakesDoUkar c_TrlsHalf? _;  /* may be half trls in between */
+
+/* word-final halant selection */
+ga806 > ga806_final / _ c_WBChars;
+
+endtable;	/* subs */
+
+
+table(pos)
+
+#define attached user1
+
+// Could be a trls in between when we do the LDia
+// Could be a trls or ukar in between when we do the upper diacritics (only anusvara and dvisvara)
+
+c_BaseCharsSP c_LDia {attach {to=@1; at=LS; with=LM}; attached = 1}	/ ^ _ c_TrlsHalf? _ {attached == 0};
+c_BaseCharsSP c_UDia {attach {to=@1; at=US; with=UM}; attached = 1}	/ ^ _ c_TrlsHalf? c_Ukar? _ {attached == 0};
+
+/* adjust ukar on ph+l and j+bo conjuncts */
+ga81a_a806_a81f ga825_left {shift.x=40m; shift.y=-90m; advance.x=advancewidth+40m};
+ga80e_a806_a81b ga825_do {shift.x=-180m; advance.x=advancewidth-90m};  /* shifts left 180, but only reduces width by 90 */
+
+/* move comma away from do chars */
+c_DoChars g_comma {kern.x = 100m; kern.y=-50m};
+
+/* move half-t down on 'THalfAdj' characters */
+c_THalfAdj ga814_half {shift.y=-150m};
+
+/* move half-t down and ukar right on 'THalfAdj' characters if ukar present */
+c_THalfAdj ga814_half {shift.y=-110m} ga825 {kern.x=50m};
+
+endtable; 	/* pos */
