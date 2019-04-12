@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uniA825.Do" format="2">
+  <outline>
+    <contour>
+      <point x="366" y="1116" type="line"/>
+      <point x="46" y="1116" type="line"/>
+      <point x="-54" y="1016" type="line"/>
+      <point x="266" y="1016" type="line"/>
+    </contour>
+    <contour>
+      <point x="324" y="-144" type="curve" smooth="yes"/>
+      <point x="324" y="-106"/>
+      <point x="316" y="-28"/>
+      <point x="264" y="-28" type="curve" smooth="yes"/>
+      <point x="204" y="-28"/>
+      <point x="132" y="-132"/>
+      <point x="102" y="-180" type="curve"/>
+      <point x="112" y="-176"/>
+      <point x="122" y="-174"/>
+      <point x="130" y="-174" type="curve" smooth="yes"/>
+      <point x="164" y="-174"/>
+      <point x="174" y="-200"/>
+      <point x="174" y="-230" type="curve" smooth="yes"/>
+      <point x="174" y="-464"/>
+      <point x="-156" y="-506"/>
+      <point x="-334" y="-506" type="curve" smooth="yes"/>
+      <point x="-430" y="-506"/>
+      <point x="-524" y="-494"/>
+      <point x="-618" y="-476" type="curve"/>
+      <point x="-752" y="-610" type="line"/>
+      <point x="-442" y="-610"/>
+      <point x="324" y="-586"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.originalWidth</key>
+      <integer>206</integer>
+    </dict>
+  </lib>
+</glyph>

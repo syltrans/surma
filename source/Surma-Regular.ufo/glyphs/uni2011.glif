@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni2011" format="2">
+  <advance width="519"/>
+  <unicode hex="2011"/>
+  <anchor x="260" y="761" name="U"/>
+  <outline>
+    <contour>
+      <point x="457" y="291" type="line"/>
+      <point x="457" y="406" type="line"/>
+      <point x="63" y="406" type="line"/>
+      <point x="63" y="291" type="line"/>
+    </contour>
+  </outline>
+</glyph>

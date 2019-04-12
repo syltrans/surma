@@ -1,5 +1,9 @@
-Surma
-=====
+# Surma
 
-Font for the Sylheti Nagri script. The contents of this repository are still in flux and incomplete, so we strongly recommend you neither fork nor bundle the project at this time.
+The Surma font supports the Sylheti Nagri script. This is currently a work-in-progress, so these fonts and related files are preliminary and incomplete. They should not be used for creating derivatives until a later release.
 
+For copyright and licensing information - including any Reserved Font Names - see [OFL.txt](OFL.txt).
+
+For practical information about using, modifying and redistributing this font see [OFL-FAQ.txt](OFL-FAQ.txt).
+
+For more details about this project, including changelog and acknowledgements see [FONTLOG.txt](FONTLOG.txt) and [README.txt](README.txt).

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Uses pysilfont tools
+
+psfnormalize -p checkfix=fix source/Surma-Regular.ufo -l source/logs/normR.log

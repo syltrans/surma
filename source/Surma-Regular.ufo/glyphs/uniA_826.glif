@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uniA826" format="2">
+  <unicode hex="A826"/>
+  <anchor x="-220" y="1160" name="_U"/>
+  <outline>
+    <contour>
+      <point x="-170" y="1160" type="line"/>
+      <point x="-562" y="1610" type="line"/>
+      <point x="-690" y="1480" type="line"/>
+      <point x="-220" y="1112" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.originalWidth</key>
+      <integer>2</integer>
+    </dict>
+  </lib>
+</glyph>
