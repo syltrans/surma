@@ -3,3 +3,4 @@
 # Uses pysilfont tools
 
 psfnormalize -p checkfix=fix source/Surma-Regular.ufo -l source/logs/normR.log
+psfexportanchors -g source/Surma-Regular.ufo source/Surma_anchors.xml -l source/logs/exportanchors.log
