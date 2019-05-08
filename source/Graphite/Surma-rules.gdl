@@ -1,7 +1,7 @@
 #include "stddef.gdh"
 
-/* No Glyph table. All glyph defs are in the base gdl file Surma-025-glyphs.gdl */
-/* That file then #includes this one */
+/* Get glyph definitions */
+#include "Surma-glyphs.gdl"
 
 table(subs)
 
