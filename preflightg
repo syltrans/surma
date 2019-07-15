@@ -1,9 +1,13 @@
 #!/bin/sh
-
 # Uses pysilfont tools
 
-# Produce individual UFOs from Glyphs file
+# Produce UFO from Glyphs file
 psfglyphs2ufo --nofea source/Surma.glyphs source -l source/logs/glyphsexportR.log
 
-# Continue with normal preflight
-./preflight
+psfnormalize -p checkfix=fix source/Surma-Regular.ufo -l source/logs/normR.log
+
+# Fix problem with non-spacing marks due to glyphsLib bug
+psfremovegliflibkeys source/Surma-Regular.ufo com.schriftgestaltung.Glyphs.originalWidth  -l source/logs/widthfixR.log
+
+psfexportanchors -g source/Surma-Regular.ufo source/Surma_anchors.xml -l source/logs/exportanchors.log
+

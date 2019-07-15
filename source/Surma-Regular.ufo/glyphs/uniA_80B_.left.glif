@@ -32,10 +32,4 @@
       <point x="-876" y="1324" type="curve" smooth="yes"/>
     </contour>
   </outline>
-  <lib>
-    <dict>
-      <key>com.schriftgestaltung.Glyphs.originalWidth</key>
-      <integer>2</integer>
-    </dict>
-  </lib>
 </glyph>

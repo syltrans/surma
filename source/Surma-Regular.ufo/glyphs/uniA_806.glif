@@ -22,10 +22,4 @@
       <point x="258" y="1116" type="curve"/>
     </contour>
   </outline>
-  <lib>
-    <dict>
-      <key>com.schriftgestaltung.Glyphs.originalWidth</key>
-      <integer>2</integer>
-    </dict>
-  </lib>
 </glyph>
