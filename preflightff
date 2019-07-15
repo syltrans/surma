@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Uses pysilfont tools
+
+psffixffglifs -p checkfix=fix source/Surma-Regular.ufo -l source/logs/fixffR.log
+psfexportanchors -g source/Surma-Regular.ufo source/Surma_anchors.xml -l source/logs/exportanchors.log
