@@ -20,12 +20,15 @@ BUILDLABEL = ""
 getufoinfo('source/Surma-Regular.ufo')
 
 fontfamily=APPNAME
+
 designspace('source/' + fontfamily + '.designspace',
                 target = "${DS:FILENAME_BASE}.ttf",
         	script = ['DFLT', 'sylo'],
-        	opentype = volt ('source/archive/VOLT/Surma-VOLT.vtp', no_make = (1)),
+     		opentype = fea('source/fea/Surma.fea', no_make = True),
+
         	graphite = gdl ('source/Graphite/Surma-rules.gdl', no_make = True,
                         params = '-e gdlerr.txt'),
-        	ap = 'source/Surma_anchors.xml',
-                pdf = fret(params="-r -oi")
-    )
+
+	       	ap = 'source/Surma_anchors.xml',
+         	pdf = fret(params="-r -oi")
+	    )

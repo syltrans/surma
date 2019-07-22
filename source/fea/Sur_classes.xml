@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+<classes>
+
+    <class name='BaseChars'>
+        uniA800 uniA801 uniA803 uniA804 uniA805 uniA807 uniA808 uniA809 uniA80A uniA80C uniA80D uniA80E uniA80F uniA810 uniA811		
+        uniA812 uniA813 uniA814 uniA815 uniA816 uniA817 uniA818 uniA819 uniA81A uniA81B uniA81C uniA81D uniA81E uniA81F uniA820		
+        uniA821 uniA822 uniA823 uniA824 uniA807A806A807 uniA807A806A808 uniA807A806A810 uniA807A806A814 uniA807A806A81E		
+        uniA807A806A81F uniA807A806A821 uniA808A806A814 uniA808A806A81B uniA809A806A818 uniA80CA806A80C uniA80CA806A80D		
+        uniA80DA806A815 uniA80EA806A80E uniA814A806A814 uniA814A806A815 uniA814A806A81E uniA816A806A816 uniA818A806A807		
+        uniA818A806A809 uniA818A806A80C uniA818A806A80D uniA818A806A80E uniA818A806A810 uniA818A806A812 uniA818A806A814		
+        uniA818A806A816 uniA818A806A817 uniA818A806A818 uniA818A806A821 uniA819A806A80D uniA819A806A810 uniA819A806A814		
+        uniA819A806A819 uniA819A806A821 uniA81AA806A80D uniA81BA806A816 uniA81BA806A81B uniA81DA806A819 uniA81DA806A81B		
+        uniA81DA806A81D uniA81FA806A81F uniA821A806A807 uniA821A806A80C uniA821A806A80D uniA821A806A810 uniA821A806A811		
+        uniA821A806A814 uniA821A806A815 uniA821A806A81B uniA807A806A807.alt uniA809A806A809 uniA821A806A821 uniA810A806A810		
+        uniA816A806A81E uniA81AA806A814 uniA81AA806A81E uniA81AA806A81F uniA81AA806A821 uniA81EA806A80A uniA81EA806A814		
+        uniA81EA806A815 uniA81EA806A818 uniA81EA806A81B uniA81EA806A81C uniA81EA806A80C uniA81EA806A812 uniA80DA806A814		
+        uniA80DA806A81E uniA80DA806A81F uniA80DA806A821 uniA80EA806A81B 	
+    </class>
+
+    <class name='BaseCharsSP'>
+        uniA800 uniA801 uniA803 uniA804 uniA805 uniA807 uniA808 uniA809 uniA80A uniA80C uniA80D uniA80E uniA80F uniA810 uniA811		
+        uniA812 uniA813 uniA814 uniA815 uniA816 uniA817 uniA818 uniA819 uniA81A uniA81B uniA81C uniA81D uniA81E uniA81F uniA820		
+        uniA821 uniA822 uniA823 uniA824 uniA807A806A807 uniA807A806A808 uniA807A806A810 uniA807A806A814 uniA807A806A81E		
+        uniA807A806A81F uniA807A806A821 uniA808A806A814 uniA808A806A81B uniA809A806A818 uniA80CA806A80C uniA80CA806A80D		
+        uniA80DA806A815 uniA80EA806A80E uniA814A806A814 uniA814A806A815 uniA814A806A81E uniA816A806A816 uniA818A806A807		
+        uniA818A806A809 uniA818A806A80C uniA818A806A80D uniA818A806A80E uniA818A806A810 uniA818A806A812 uniA818A806A814		
+        uniA818A806A816 uniA818A806A817 uniA818A806A818 uniA818A806A821 uniA819A806A80D uniA819A806A810 uniA819A806A814		
+        uniA819A806A819 uniA819A806A821 uniA81AA806A80D uniA81BA806A816 uniA81BA806A81B uniA81DA806A819 uniA81DA806A81B		
+        uniA81DA806A81D uniA81FA806A81F uniA821A806A807 uniA821A806A80C uniA821A806A80D uniA821A806A810 uniA821A806A811		
+        uniA821A806A814 uniA821A806A815 uniA821A806A81B uniA807A806A807.alt uniA809A806A809 uniA821A806A821 uniA810A806A810		
+        uniA816A806A81E uniA81AA806A814 uniA81AA806A81E uniA81AA806A81F uniA81AA806A821 uniA81EA806A80A uniA81EA806A814		
+        uniA81EA806A815 uniA81EA806A818 uniA81EA806A81B uniA81EA806A81C uniA81EA806A80C uniA81EA806A812 uniA80DA806A814		
+        uniA80DA806A81E uniA80DA806A81F uniA80DA806A821 uniA80EA806A81B uni00A0 uni2000 uni2001 uni2002 uni2003 uni2004 uni2005		
+        uni2006 uni2007 uni2008 uni2009 uni200A uni202F 	
+    </class>
+
+    <class name='DoChars'>
+        uniA816 uniA816A806A816 uniA818A806A816 uniA81BA806A816 uniA816A806A81E 	
+    </class>
+
+    <class name='LowerDias'>
+        uniA806.final 	
+    </class>
+
+    <class name='THalfAdj'>
+        uniA809 uniA80A uniA80C uniA80E uniA815 uniA816 uniA817 uniA81B uniA81C uniA81D 	
+    </class>
+
+    <class name='TakesDoUkar'>
+        uniA816 uniA816A806A816 uniA818A806A816 uniA81BA806A816 uniA816A806A81E uniA81AA806A80D uniA80EA806A81B 	
+    </class>
+
+    <class name='TakesLeftUkar'>
+        uniA80F uniA811 uniA812 uniA813 uniA81A uniA820 uniA818A806A812 uniA821A806A811 uniA81AA806A81E uniA81AA806A81F		
+        uniA81AA806A821 	
+    </class>
+
+    <class name='TrlsHalf'>
+        uniA814.half uniA81E.half uniA81F.half uniA821.half 	
+    </class>
+
+    <class name='UpperDias'>
+        uniA802 uniA80B uniA826 uniA826A80B uniA802A80B 	
+    </class>
+
+    <class name='UseHalftrls'>
+        uniA800 uniA807 uniA808 uniA809 uniA80A uniA80C uniA80D uniA80E uniA814 uniA815 uniA816 uniA817 uniA818 uniA819 uniA81A		
+        uniA81B uniA81C uniA81D uniA821 	
+    </class>
+
+    <class name='WBChars'>
+        space exclam quotedbl quotesingle parenleft parenright plus comma hyphen period slash colon semicolon less equal greater		
+        question bracketleft bracketright braceleft braceright uni0964 uni0965 quoteleft quoteright quotedblleft quotedblright		
+        minus uniA828 uniA829 uniA82A uniA82B uni00A0 uni00AD guillemotleft guillemotright uni2000 uni2001 uni2002 uni2003 uni2004		
+        uni2005 uni2006 uni2007 uni2008 uni2009 uni200A uni200B uni2010 uni2011 figuredash endash emdash uni2015 uni202F		
+        guilsinglleft guilsinglright fraction uniFFFD 	
+    </class>
+
+</classes>

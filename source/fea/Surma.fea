@@ -1,0 +1,913 @@
+#  FEA file for defining OpenType behaviour for the Surma font
+#  sps, 16-July-2019
+
+
+#**********************************
+#  Glyphs
+#**********************************
+
+#  All base glyphs (for GDEF table)
+@GDEF_bases = [ A AE Aacute Acircumflex Adieresis Agrave Aring Atilde B C CR Ccedilla D E Eacute Ecircumflex		
+    Edieresis Egrave Eth Euro F G H I Iacute Icircumflex Idieresis Igrave J K L M N Ntilde O OE Oacute Ocircumflex Odieresis Ograve		
+    Oslash Otilde P Q R S Scaron T Thorn U Uacute Ucircumflex Udieresis Ugrave V W X Y Yacute Ydieresis Z Zcaron a aacute		
+    acircumflex acute adieresis ae agrave ampersand approxequal aring asciicircum asciitilde asterisk at atilde b backslash bar		
+    braceleft braceright bracketleft bracketright breve brokenbar bullet c caron ccedilla cedilla cent circumflex colon comma		
+    copyright currency d dagger daggerdbl degree dieresis divide dollar dotaccent dotlessi e eacute ecircumflex edieresis egrave		
+    eight ellipsis emdash endash equal eth exclam exclamdown f fi figuredash five fl florin four fraction g germandbls .notdef		
+    grave greater greaterequal guillemotleft guillemotright guilsinglleft guilsinglright h hungarumlaut hyphen i iacute icircumflex		
+    idieresis igrave Delta infinity integral j k l less lessequal logicalnot lozenge m macron minus mu multiply n nine notequal		
+    ntilde .null numbersign o oacute ocircumflex odieresis oe ogonek ograve one onehalf onequarter onesuperior ordfeminine		
+    ordmasculine oslash otilde p paragraph parenleft parenright partialdiff percent period periodcentered perthousand pi plus		
+    plusminus product q question questiondown quotedbl quotedblbase quotedblleft quotedblright quoteleft quoteright quotesinglbase		
+    quotesingle r radical registered ring s scaron section semicolon seven six slash space sterling summation sylSpacer t thorn		
+    three threequarters threesuperior tilde trademark two twosuperior u uacute ucircumflex udieresis ugrave underscore uni00A0		
+    uni00AD uni03A9 uni0964 uni0965 uni09E6 uni09E7 uni09E8 uni09E9 uni09EA uni09EB uni09EC uni09ED uni09EE uni09EF uni09F3 uni2000		
+    uni2001 uni2002 uni2003 uni2004 uni2005 uni2006 uni2007 uni2008 uni2009 uni200A uni200B uni200C uni200D uni200E uni200F uni2010		
+    uni2011 uni2015 uni2027 uni2028 uni2029 uni202A uni202B uni202C uni202D uni202E uni202F uni2055 uni2060 uni2219 uni25CC uniA800		
+    uniA801 uniA803 uniA804 uniA805 uniA806 uniA807 uniA807A806A807 uniA807A806A807.alt uniA807A806A808 uniA807A806A810		
+    uniA807A806A814 uniA807A806A81E uniA807A806A81F uniA807A806A821 uniA808 uniA808A806A814 uniA808A806A81B uniA809 uniA809A806A809		
+    uniA809A806A818 uniA80A uniA80C uniA80CA806A80C uniA80CA806A80D uniA80D uniA80DA806A814 uniA80DA806A815 uniA80DA806A81E		
+    uniA80DA806A81F uniA80DA806A821 uniA80E uniA80EA806A80E uniA80EA806A81B uniA80F uniA810 uniA810A806A810 uniA811 uniA812 uniA813		
+    uniA814 uniA814A806A814 uniA814A806A815 uniA814A806A81E uniA815 uniA816 uniA816A806A816 uniA816A806A81E uniA817 uniA818		
+    uniA818A806A807 uniA818A806A809 uniA818A806A80C uniA818A806A80D uniA818A806A80E uniA818A806A810 uniA818A806A812 uniA818A806A814		
+    uniA818A806A816 uniA818A806A817 uniA818A806A818 uniA818A806A821 uniA819 uniA819A806A80D uniA819A806A810 uniA819A806A814		
+    uniA819A806A819 uniA819A806A821 uniA81A uniA81AA806A80D uniA81AA806A814 uniA81AA806A81E uniA81AA806A81F uniA81AA806A821 uniA81B		
+    uniA81BA806A816 uniA81BA806A81B uniA81C uniA81D uniA81DA806A819 uniA81DA806A81B uniA81DA806A81D uniA81E uniA81E.pre		
+    uniA81EA806A80A uniA81EA806A80C uniA81EA806A812 uniA81EA806A814 uniA81EA806A815 uniA81EA806A818 uniA81EA806A81B uniA81EA806A81C		
+    uniA81F uniA81FA806A81F uniA820 uniA821 uniA821A806A807 uniA821A806A80C uniA821A806A80D uniA821A806A810 uniA821A806A811		
+    uniA821A806A814 uniA821A806A815 uniA821A806A81B uniA821A806A821 uniA822 uniA823 uniA824 uniA825 uniA825.Do uniA827 uniA827A80B		
+    uniA828 uniA829 uniA82A uniA82B uniFE00 uniFE01 uniFE02 uniFE03 uniFE04 uniFE05 uniFE06 uniFE07 uniFE08 uniFE09 uniFE0A uniFE0B		
+    uniFE0C uniFE0D uniFE0E uniFE0F uniFEFF uniFFFC uniFFFD v w x y yacute ydieresis yen z zcaron zero ] ;	
+
+#  All mark glyphs (for GDEF table)
+#  Includes word-final hasant (uniA806.final) but not regular 'circumflex' hasant (uniA806)
+#  Includes subjoined t,r,l,s
+#  Does not include marks with width (vowel signs a, i, u and o) but includes .left version of u since it has no width
+@GDEF_marks = [ uniA802 uniA802A80B uniA806.final uniA80B uniA80B.left uniA814.half uniA81E.half uniA81F.half uniA821.half		
+    uniA825.left uniA826 uniA826.left uniA826.mid uniA826A80B ] ;	
+
+table GDEF {
+GlyphClassDef
+    @GDEF_bases, # base glyphs
+    ,     # no ligature glyphs
+    @GDEF_marks, # mark glyphs
+    ;     # no component glyphs
+ } GDEF;
+
+
+#**********************************
+#  Mark Classes
+#**********************************
+    markClass uniA802 <anchor -220 1160> @MARK_U ;
+    markClass uniA802A80B <anchor -405 1160> @MARK_U ;
+    markClass uniA80B <anchor -230 1160> @MARK_U ;
+    markClass uniA826 <anchor -220 1160> @MARK_U ;
+    markClass uniA826A80B <anchor -402 1160> @MARK_U ;
+    markClass uniA806.final <anchor -490 -150> @MARK_L ;
+#    markClass uniA806.final <anchor 0 0> @MARK_U ;	# commented out sps - not an upper mark
+
+
+#**********************************
+#  Glyph classes
+#**********************************
+
+#  Syloti Nagri base characters. Used by RoPre lookup to ensure that the pre-form of Ro only displays with another Nagri character 
+@BaseChars = [ uniA800 uniA801 uniA803 uniA804 uniA805 uniA807 uniA808 uniA809 uniA80A uniA80C uniA80D uniA80E uniA80F uniA810		
+    uniA811 uniA812 uniA813 uniA814 uniA815 uniA816 uniA817 uniA818 uniA819 uniA81A uniA81B uniA81C uniA81D uniA81E uniA81F uniA820		
+    uniA821 uniA822 uniA823 uniA824 uniA807A806A807 uniA807A806A808 uniA807A806A810 uniA807A806A814 uniA807A806A81E uniA807A806A81F		
+    uniA807A806A821 uniA808A806A814 uniA808A806A81B uniA809A806A818 uniA80CA806A80C uniA80CA806A80D uniA80DA806A815 uniA80EA806A80E		
+    uniA814A806A814 uniA814A806A815 uniA814A806A81E uniA816A806A816 uniA818A806A807 uniA818A806A809 uniA818A806A80C uniA818A806A80D		
+    uniA818A806A80E uniA818A806A810 uniA818A806A812 uniA818A806A814 uniA818A806A816 uniA818A806A817 uniA818A806A818 uniA818A806A821		
+    uniA819A806A80D uniA819A806A810 uniA819A806A814 uniA819A806A819 uniA819A806A821 uniA81AA806A80D uniA81BA806A816 uniA81BA806A81B		
+    uniA81DA806A819 uniA81DA806A81B uniA81DA806A81D uniA81FA806A81F uniA821A806A807 uniA821A806A80C uniA821A806A80D uniA821A806A810		
+    uniA821A806A811 uniA821A806A814 uniA821A806A815 uniA821A806A81B uniA807A806A807.alt uniA809A806A809 uniA821A806A821		
+    uniA810A806A810 uniA816A806A81E uniA81AA806A814 uniA81AA806A81E uniA81AA806A81F uniA81AA806A821 uniA81EA806A80A uniA81EA806A814		
+    uniA81EA806A815 uniA81EA806A818 uniA81EA806A81B uniA81EA806A81C uniA81EA806A80C uniA81EA806A812 uniA80DA806A814 uniA80DA806A81E		
+    uniA80DA806A81F uniA80DA806A821 uniA80EA806A81B  ] ;	
+
+#  Not actually needed - never called because all characters are listed explicitly in lookups LDias and UDias
+#  But according to Bob H, if we switch to FEAX we can replace all those rules in lookup UDias (and LDias) with 
+#          pos base @BaseCharsSP mark @Udias
+@BaseCharsSP = [ uniA800 uniA801 uniA803 uniA804 uniA805 uniA807 uniA808 uniA809 uniA80A uniA80C uniA80D uniA80E uniA80F uniA810		
+    uniA811 uniA812 uniA813 uniA814 uniA815 uniA816 uniA817 uniA818 uniA819 uniA81A uniA81B uniA81C uniA81D uniA81E uniA81F uniA820		
+    uniA821 uniA822 uniA823 uniA824 uniA807A806A807 uniA807A806A808 uniA807A806A810 uniA807A806A814 uniA807A806A81E uniA807A806A81F		
+    uniA807A806A821 uniA808A806A814 uniA808A806A81B uniA809A806A818 uniA80CA806A80C uniA80CA806A80D uniA80DA806A815 uniA80EA806A80E		
+    uniA814A806A814 uniA814A806A815 uniA814A806A81E uniA816A806A816 uniA818A806A807 uniA818A806A809 uniA818A806A80C uniA818A806A80D		
+    uniA818A806A80E uniA818A806A810 uniA818A806A812 uniA818A806A814 uniA818A806A816 uniA818A806A817 uniA818A806A818 uniA818A806A821		
+    uniA819A806A80D uniA819A806A810 uniA819A806A814 uniA819A806A819 uniA819A806A821 uniA81AA806A80D uniA81BA806A816 uniA81BA806A81B		
+    uniA81DA806A819 uniA81DA806A81B uniA81DA806A81D uniA81FA806A81F uniA821A806A807 uniA821A806A80C uniA821A806A80D uniA821A806A810		
+    uniA821A806A811 uniA821A806A814 uniA821A806A815 uniA821A806A81B uniA807A806A807.alt uniA809A806A809 uniA821A806A821		
+    uniA810A806A810 uniA816A806A81E uniA81AA806A814 uniA81AA806A81E uniA81AA806A81F uniA81AA806A821 uniA81EA806A80A uniA81EA806A814		
+    uniA81EA806A815 uniA81EA806A818 uniA81EA806A81B uniA81EA806A81C uniA81EA806A80C uniA81EA806A812 uniA80DA806A814 uniA80DA806A81E		
+    uniA80DA806A81F uniA80DA806A821 uniA80EA806A81B uni00A0 uni2000 uni2001 uni2002 uni2003 uni2004 uni2005 uni2006 uni2007 uni2008		
+    uni2009 uni200A uni202F  ] ;	
+
+#  Glyphs based on Do (uniA816). These take a special ukar (uniA825.do)
+@DoChars = [ uniA816 uniA816A806A816 uniA818A806A816 uniA81BA806A816 uniA816A806A81E  ] ;	
+
+#  Upper diacritics
+@UpperDias = [ uniA802 uniA80B uniA826 uniA826A80B uniA802A80B  ] ;	
+
+#  The only lower diacritic is word-final hasanta. (But see note at @WBChars class.)
+@LowerDias = [ uniA806.final  ] ;	
+
+#  Glyphs where the subjoined half-ta clashes and needs to be moved down.
+#  (See lookup THalfAdj)
+@THalfAdj = [ uniA809 uniA80A uniA80C uniA80E uniA815 uniA816 uniA817 uniA81B uniA81C uniA81D  ] ;	
+
+#  Glyphs based on Do (U+A816). These take a special form of ukar (uniA825.do)
+@TakesDoUkar = [ uniA816 uniA816A806A816 uniA818A806A816 uniA81BA806A816 uniA816A806A81E uniA81AA806A80D uniA80EA806A81B  ] ;	
+
+#  Glyphs that take the left form of ukar (uniA825.left)
+@TakesLeftUkar = [ uniA80F uniA811 uniA812 uniA813 uniA81A uniA820 uniA818A806A812 uniA821A806A811 uniA81AA806A81E uniA81AA806A81F		
+    uniA81AA806A821  ] ;
+
+#  Subjoined forms of t, r, l and s. These act as marks on the base glyph
+@TrlsHalf = [ uniA814.half uniA81E.half uniA81F.half uniA821.half  ] ;	
+
+#  Glyphs that take the subjoined form of t, r, l, s
+@UseHalftrls = [ uniA800 uniA807 uniA808 uniA809 uniA80A uniA80C uniA80D uniA80E uniA814 uniA815 uniA816 uniA817 uniA818 uniA819		
+    uniA81A uniA81B uniA81C uniA81D uniA821  ] ;	
+
+#  WordBreak characters. Word-final hasant should display as the Bangla form (uniA806.final, a short
+#  diagonal stroke below the character). We do that by looking for one of these WordBreak characters.
+#  Note that this list is incomplete (for example, it does not include punctuation like $ % or digits, 
+#  which are not expected to appear in normal text). A better way to do this would be to display the Bangla form
+#  everywhere except between two Nagri characters, then we wouldn't have to try to include all WB characters here.
+#  But there is currently (as of Jan 2019) a proposal before the UTC to encode a separate character for this.
+#  So we'll leave it like this for now, pending their decision.
+@WBChars = [ space exclam quotedbl quotesingle parenleft parenright plus comma hyphen period slash colon semicolon less equal		
+    greater question bracketleft bracketright braceleft braceright uni0964 uni0965 quoteleft quoteright quotedblleft quotedblright		
+    minus uniA828 uniA829 uniA82A uniA82B uni00A0 uni00AD guillemotleft guillemotright uni2000 uni2001 uni2002 uni2003 uni2004		
+    uni2005 uni2006 uni2007 uni2008 uni2009 uni200A uni200B uni2010 uni2011 figuredash endash emdash uni2015 uni202F guilsinglleft		
+    guilsinglright fraction uniFFFD  ] ;	
+
+
+#**********************************
+#  Language Systems
+#**********************************
+
+languagesystem DFLT dflt ;
+languagesystem sylo dflt ;
+
+
+#**********************************
+#  Lookups
+#**********************************
+
+lookup ConjunctForms {
+  lookupflag 0 ;
+    sub uniA807 uniA806 uniA807 by uniA807A806A807 ;
+    sub uniA807 uniA806 uniA808 by uniA807A806A808 ;
+    sub uniA807 uniA806 uniA810 by uniA807A806A810 ;
+    sub uniA807 uniA806 uniA814 by uniA807A806A814 ;
+    sub uniA807 uniA806 uniA81E by uniA807A806A81E ;
+    sub uniA807 uniA806 uniA81F by uniA807A806A81F ;
+    sub uniA807 uniA806 uniA821 by uniA807A806A821 ;
+    sub uniA808 uniA806 uniA814 by uniA808A806A814 ;
+    sub uniA808 uniA806 uniA81B by uniA808A806A81B ;
+    sub uniA809 uniA806 uniA818 by uniA809A806A818 ;
+    sub uniA80C uniA806 uniA80C by uniA80CA806A80C ;
+    sub uniA80C uniA806 uniA80D by uniA80CA806A80D ;
+    sub uniA80D uniA806 uniA815 by uniA80DA806A815 ;
+    sub uniA80E uniA806 uniA80E by uniA80EA806A80E ;
+    sub uniA814 uniA806 uniA814 by uniA814A806A814 ;
+    sub uniA814 uniA806 uniA815 by uniA814A806A815 ;
+    sub uniA814 uniA806 uniA81E by uniA814A806A81E ;
+    sub uniA816 uniA806 uniA816 by uniA816A806A816 ;
+    sub uniA818 uniA806 uniA807 by uniA818A806A807 ;
+    sub uniA818 uniA806 uniA809 by uniA818A806A809 ;
+    sub uniA818 uniA806 uniA80C by uniA818A806A80C ;
+    sub uniA818 uniA806 uniA80D by uniA818A806A80D ;
+    sub uniA818 uniA806 uniA80E by uniA818A806A80E ;
+    sub uniA818 uniA806 uniA810 by uniA818A806A810 ;
+    sub uniA818 uniA806 uniA812 by uniA818A806A812 ;
+    sub uniA818 uniA806 uniA814 by uniA818A806A814 ;
+    sub uniA818 uniA806 uniA816 by uniA818A806A816 ;
+    sub uniA818 uniA806 uniA817 by uniA818A806A817 ;
+    sub uniA818 uniA806 uniA818 by uniA818A806A818 ;
+    sub uniA818 uniA806 uniA821 by uniA818A806A821 ;
+    sub uniA819 uniA806 uniA80D by uniA819A806A80D ;
+    sub uniA819 uniA806 uniA810 by uniA819A806A810 ;
+    sub uniA819 uniA806 uniA814 by uniA819A806A814 ;
+    sub uniA819 uniA806 uniA819 by uniA819A806A819 ;
+    sub uniA819 uniA806 uniA821 by uniA819A806A821 ;
+    sub uniA81A uniA806 uniA80D by uniA81AA806A80D ;
+    sub uniA81B uniA806 uniA816 by uniA81BA806A816 ;
+    sub uniA81B uniA806 uniA81B by uniA81BA806A81B ;
+    sub uniA81D uniA806 uniA819 by uniA81DA806A819 ;
+    sub uniA81D uniA806 uniA81B by uniA81DA806A81B ;
+    sub uniA81D uniA806 uniA81D by uniA81DA806A81D ;
+    sub uniA81F uniA806 uniA81F by uniA81FA806A81F ;
+    sub uniA821 uniA806 uniA807 by uniA821A806A807 ;
+    sub uniA821 uniA806 uniA80C by uniA821A806A80C ;
+    sub uniA821 uniA806 uniA80D by uniA821A806A80D ;
+    sub uniA821 uniA806 uniA810 by uniA821A806A810 ;
+    sub uniA821 uniA806 uniA811 by uniA821A806A811 ;
+    sub uniA821 uniA806 uniA814 by uniA821A806A814 ;
+    sub uniA821 uniA806 uniA815 by uniA821A806A815 ;
+    sub uniA821 uniA806 uniA81B by uniA821A806A81B ;
+    sub uniA809 uniA806 uniA809 by uniA809A806A809 ;
+    sub uniA810 uniA806 uniA810 by uniA810A806A810 ;
+    sub uniA821 uniA806 uniA821 by uniA821A806A821 ;
+    sub uniA816 uniA806 uniA81E by uniA816A806A81E ;
+    sub uniA81A uniA806 uniA814 by uniA81AA806A814 ;
+    sub uniA81A uniA806 uniA81E by uniA81AA806A81E ;
+    sub uniA81A uniA806 uniA81F by uniA81AA806A81F ;
+    sub uniA81A uniA806 uniA821 by uniA81AA806A821 ;
+    sub uniA81E uniA806 uniA80A by uniA81EA806A80A ;
+    sub uniA81E uniA806 uniA814 by uniA81EA806A814 ;
+    sub uniA81E uniA806 uniA815 by uniA81EA806A815 ;
+    sub uniA81E uniA806 uniA818 by uniA81EA806A818 ;
+    sub uniA81E uniA806 uniA81B by uniA81EA806A81B ;
+    sub uniA81E uniA806 uniA81C by uniA81EA806A81C ;
+    sub uniA81E uniA806 uniA80C by uniA81EA806A80C ;
+    sub uniA81E uniA806 uniA812 by uniA81EA806A812 ;
+    sub uniA80D uniA806 uniA814 by uniA80DA806A814 ;
+    sub uniA80D uniA806 uniA81E by uniA80DA806A81E ;
+    sub uniA80D uniA806 uniA81F by uniA80DA806A81F ;
+    sub uniA80D uniA806 uniA821 by uniA80DA806A821 ;
+    sub uniA80E uniA806 uniA81B by uniA80EA806A81B ;
+} ConjunctForms;
+
+lookup HalfForms_target {
+  lookupflag 0 ;
+    sub uniA806 uniA814 by uniA814.half ;
+    sub uniA806 uniA81E by uniA81E.half ;
+    sub uniA806 uniA81F by uniA81F.half ;
+    sub uniA806 uniA821 by uniA821.half ;
+} HalfForms_target ;
+
+lookup HalfForms {
+  lookupflag 0 ;
+    sub @UseHalftrls uniA806' lookup HalfForms_target [ uniA814 uniA81E uniA81F uniA821 ]'  ;
+} HalfForms;
+
+#  Special ukar for glyphs based on Do, with subjoined t, r, l or s in between
+#  This lookup must come before lookup DoUkar
+lookup DoUkarTrls {
+  lookupflag 0 ;
+    sub @TakesDoUkar @TrlsHalf uniA825' by uniA825.Do ;
+} DoUkarTrls;
+
+#  Special ukar for glyphs based on Do
+lookup DoUkar {
+  lookupflag 0 ;
+    sub @TakesDoUkar uniA825' by uniA825.Do ;
+} DoUkar;
+
+lookup LeftUkar {
+  lookupflag 0 ;
+    sub @TakesLeftUkar uniA825' by uniA825.left ;
+} LeftUkar;
+
+lookup RoHalf_target {
+  lookupflag 0 ;
+    sub uniA806 uniA81E by uniA81E.half ;
+} RoHalf_target ;
+
+lookup RoHalf {
+  lookupflag 0 ;
+    sub uniA81E uniA806' lookup RoHalf_target uniA81E'  ;
+} RoHalf;
+
+lookup RoPre_target {
+  lookupflag 0 ;
+    sub uniA81E uniA806 by uniA81E.pre ;
+} RoPre_target ;
+
+lookup RoPre {
+  lookupflag 0 ;
+    sub uniA81E' lookup RoPre_target uniA806'  @BaseChars ;
+} RoPre;
+
+#  Use word-final halant before WordBreak characters
+lookup FinalHalant {
+  lookupflag 0 ;
+    sub uniA806' @WBChars by uniA806.final ;
+} FinalHalant;
+
+#  Ligatures for Upper marks combined with anusvara
+lookup MarkLigs {
+  lookupflag 0 ;
+    sub uniA826 uniA80B by uniA826A80B ;
+    sub uniA827 uniA80B by uniA827A80B ;
+    sub uniA802 uniA80B by uniA802A80B ;
+} MarkLigs;
+
+#  Adjust position of ukar on jo+bo conjunct
+lookup DoUkarAdj {
+  lookupflag 0 ;
+    #  subrule of type ADJUST_PAIR
+    pos uniA80EA806A81B <NULL> uniA825.Do <-180 0 -90 0>;
+} DoUkarAdj;
+
+#   Adjust position of ukar on pho+lo conjunct
+lookup LeftUkarAdj {
+  lookupflag 0 ;
+    #  subrule of type ADJUST_PAIR
+    pos uniA81AA806A81F <NULL> uniA825.left <40 -90 40 0>;
+} LeftUkarAdj;
+
+#  Adjust position of subjoined t on certain characters
+lookup THalfAdj {
+  lookupflag 0 ;
+    #  subrule of type ADJUST_PAIR
+    pos @THalfAdj <NULL> uniA814.half <0 -150 0 0>;
+} THalfAdj;
+
+#  Called by loookup THalfUkarAdj. Works in conjunction with the THalfAdj lookup.
+#  Having moved the half-t down 150 units when the half-t is first entered,
+#  if it is then followed by a ukar it clashes with the ukar. So this lookup
+#  moves the half-t back up 40 units and the ukar right 50 units. This separates
+#  them a bit, at the cost of a bit of clash between the half-t and the base character,
+#  since we're moving it back up a bit. We also have to add 50 to the width, since the
+#  ukar has width but shifting it to the right does not increase the advance width.
+lookup THalfUkarAdj_target {
+  lookupflag 0 ;
+    #  subrule of type ADJUST_PAIR
+    pos uniA814.half <0 40 0 0> uniA825 <50 0 50 0>;
+} THalfUkarAdj_target ;
+
+lookup THalfUkarAdj {
+  lookupflag 0 ;
+    pos @THalfAdj uniA814.half' lookup THalfUkarAdj_target uniA825'  ;
+} THalfUkarAdj;
+
+lookup DoComma {
+  lookupflag 0 ;
+    #  subrule of type ADJUST_PAIR
+    pos @DoChars <NULL> comma <75 -50 0 0>;
+} DoComma;
+
+lookup UDias {
+  lookupflag 0 ;
+    #  subrule of type ATTACH
+    pos base uniA800
+         <anchor 1303 1160> mark @MARK_U ;
+    pos base uniA801
+         <anchor 418 1160> mark @MARK_U ;
+    pos base uniA803
+         <anchor 619 1160> mark @MARK_U ;
+    pos base uniA804
+         <anchor 1017 1160> mark @MARK_U ;
+    pos base uniA805
+         <anchor 729 1160> mark @MARK_U ;
+    pos base uniA807
+         <anchor 1275 1160> mark @MARK_U ;
+    pos base uniA808
+         <anchor 1301 1160> mark @MARK_U ;
+    pos base uniA809
+         <anchor 907 1160> mark @MARK_U ;
+    pos base uniA80A
+         <anchor 776 1160> mark @MARK_U ;
+    pos base uniA80C
+         <anchor 825 1160> mark @MARK_U ;
+    pos base uniA80D
+         <anchor 776 1160> mark @MARK_U ;
+    pos base uniA80E
+         <anchor 1099 1160> mark @MARK_U ;
+    pos base uniA80F
+         <anchor 1278 1160> mark @MARK_U ;
+    pos base uniA810
+         <anchor 525 1160> mark @MARK_U ;
+    pos base uniA811
+         <anchor 435 1160> mark @MARK_U ;
+    pos base uniA812
+         <anchor 656 1160> mark @MARK_U ;
+    pos base uniA813
+         <anchor 462 1160> mark @MARK_U ;
+    pos base uniA814
+         <anchor 818 1160> mark @MARK_U ;
+    pos base uniA815
+         <anchor 1232 1160> mark @MARK_U ;
+    pos base uniA816
+         <anchor 733 1160> mark @MARK_U ;
+    pos base uniA817
+         <anchor 1138 1160> mark @MARK_U ;
+    pos base uniA818
+         <anchor 870 1160> mark @MARK_U ;
+    pos base uniA819
+         <anchor 1235 1160> mark @MARK_U ;
+    pos base uniA81A
+         <anchor 1235 1160> mark @MARK_U ;
+    pos base uniA81B
+         <anchor 727 1160> mark @MARK_U ;
+    pos base uniA81C
+         <anchor 997 1160> mark @MARK_U ;
+    pos base uniA81D
+         <anchor 894 1160> mark @MARK_U ;
+    pos base uniA81E
+         <anchor 831 1160> mark @MARK_U ;
+    pos base uniA81F
+         <anchor 833 1160> mark @MARK_U ;
+    pos base uniA820
+         <anchor 460 1160> mark @MARK_U ;
+    pos base uniA821
+         <anchor 1109 1160> mark @MARK_U ;
+    pos base uniA822
+         <anchor 1236 1160> mark @MARK_U ;
+    pos base uniA823
+         <anchor 276 1160> mark @MARK_U ;
+    pos base uniA824
+         <anchor -411 1160> mark @MARK_U ;
+    pos base uniA807A806A807
+         <anchor 1115 1160> mark @MARK_U ;
+    pos base uniA807A806A808
+         <anchor 1155 1160> mark @MARK_U ;
+    pos base uniA807A806A810
+         <anchor 1164 1160> mark @MARK_U ;
+    pos base uniA807A806A814
+         <anchor 1157 1160> mark @MARK_U ;
+    pos base uniA807A806A81E
+         <anchor 1338 1160> mark @MARK_U ;
+    pos base uniA807A806A81F
+         <anchor 1338 1160> mark @MARK_U ;
+    pos base uniA807A806A821
+         <anchor 1219 1160> mark @MARK_U ;
+    pos base uniA808A806A814
+         <anchor 1303 1160> mark @MARK_U ;
+    pos base uniA808A806A81B
+         <anchor 1304 1160> mark @MARK_U ;
+    pos base uniA809A806A818
+         <anchor 1023 1160> mark @MARK_U ;
+    pos base uniA80CA806A80C
+         <anchor 1545 1160> mark @MARK_U ;
+    pos base uniA80CA806A80D
+         <anchor 1186 1157> mark @MARK_U ;
+    pos base uniA80DA806A815
+         <anchor 1062 1160> mark @MARK_U ;
+    pos base uniA80EA806A80E
+         <anchor 1208 1160> mark @MARK_U ;
+    pos base uniA814A806A814
+         <anchor 883 1160> mark @MARK_U ;
+    pos base uniA814A806A815
+         <anchor 927 1160> mark @MARK_U ;
+    pos base uniA814A806A81E
+         <anchor 843 1160> mark @MARK_U ;
+    pos base uniA816A806A816
+         <anchor 935 1160> mark @MARK_U ;
+    pos base uniA818A806A807
+         <anchor 1869 1160> mark @MARK_U ;
+    pos base uniA818A806A809
+         <anchor 1399 1160> mark @MARK_U ;
+    pos base uniA818A806A80C
+         <anchor 1055 1160> mark @MARK_U ;
+    pos base uniA818A806A80D
+         <anchor 1353 1148> mark @MARK_U ;
+    pos base uniA818A806A80E
+         <anchor 1147 1160> mark @MARK_U ;
+    pos base uniA818A806A810
+         <anchor 848 1160> mark @MARK_U ;
+    pos base uniA818A806A812
+         <anchor 1051 1160> mark @MARK_U ;
+    pos base uniA818A806A814
+         <anchor 1045 1160> mark @MARK_U ;
+    pos base uniA818A806A816
+         <anchor 868 1160> mark @MARK_U ;
+    pos base uniA818A806A817
+         <anchor 1751 1160> mark @MARK_U ;
+    pos base uniA818A806A818
+         <anchor 1052 1160> mark @MARK_U ;
+    pos base uniA818A806A821
+         <anchor 1224 1160> mark @MARK_U ;
+    pos base uniA819A806A80D
+         <anchor 1234 1160> mark @MARK_U ;
+    pos base uniA819A806A810
+         <anchor 1241 1160> mark @MARK_U ;
+    pos base uniA819A806A814
+         <anchor 1233 1177> mark @MARK_U ;
+    pos base uniA819A806A819
+         <anchor 1231 1160> mark @MARK_U ;
+    pos base uniA819A806A821
+         <anchor 1234 1160> mark @MARK_U ;
+    pos base uniA81AA806A80D
+         <anchor 1234 1160> mark @MARK_U ;
+    pos base uniA81BA806A816
+         <anchor 710 1160> mark @MARK_U ;
+    pos base uniA81BA806A81B
+         <anchor 708 1160> mark @MARK_U ;
+    pos base uniA81DA806A819
+         <anchor 1805 1160> mark @MARK_U ;
+    pos base uniA81DA806A81B
+         <anchor 1244 1160> mark @MARK_U ;
+    pos base uniA81DA806A81D
+         <anchor 1132 1160> mark @MARK_U ;
+    pos base uniA81FA806A81F
+         <anchor 897 1160> mark @MARK_U ;
+    pos base uniA821A806A807
+         <anchor 1818 1160> mark @MARK_U ;
+    pos base uniA821A806A80C
+         <anchor 1329 1160> mark @MARK_U ;
+    pos base uniA821A806A80D
+         <anchor 996 1160> mark @MARK_U ;
+    pos base uniA821A806A810
+         <anchor 1112 1160> mark @MARK_U ;
+    pos base uniA821A806A811
+         <anchor 966 1160> mark @MARK_U ;
+    pos base uniA821A806A814
+         <anchor 1268 1160> mark @MARK_U ;
+    pos base uniA821A806A815
+         <anchor 1210 1160> mark @MARK_U ;
+    pos base uniA821A806A81B
+         <anchor 1235 1160> mark @MARK_U ;
+    pos base uniA807A806A807.alt
+         <anchor 1276 1160> mark @MARK_U ;
+    pos base uniA809A806A809
+         <anchor 1461 1160> mark @MARK_U ;
+    pos base uniA821A806A821
+         <anchor 1268 1160> mark @MARK_U ;
+    pos base uniA810A806A810
+         <anchor 525 1160> mark @MARK_U ;
+    pos base uniA816A806A81E
+         <anchor 733 1160> mark @MARK_U ;
+    pos base uniA81AA806A814
+         <anchor 1235 1160> mark @MARK_U ;
+    pos base uniA81AA806A81E
+         <anchor 1235 1160> mark @MARK_U ;
+    pos base uniA81AA806A81F
+         <anchor 1235 1160> mark @MARK_U ;
+    pos base uniA81AA806A821
+         <anchor 1235 1160> mark @MARK_U ;
+    pos base uniA81EA806A80A
+         <anchor 831 1160> mark @MARK_U ;
+    pos base uniA81EA806A814
+         <anchor 831 1160> mark @MARK_U ;
+    pos base uniA81EA806A815
+         <anchor 831 1160> mark @MARK_U ;
+    pos base uniA81EA806A818
+         <anchor 831 1160> mark @MARK_U ;
+    pos base uniA81EA806A81B
+         <anchor 831 1160> mark @MARK_U ;
+    pos base uniA81EA806A81C
+         <anchor 831 1160> mark @MARK_U ;
+    pos base uniA81EA806A80C
+         <anchor 831 1160> mark @MARK_U ;
+    pos base uniA81EA806A812
+         <anchor 831 1160> mark @MARK_U ;
+    pos base uniA80DA806A814
+         <anchor 776 1160> mark @MARK_U ;
+    pos base uniA80DA806A81E
+         <anchor 776 1160> mark @MARK_U ;
+    pos base uniA80DA806A81F
+         <anchor 776 1160> mark @MARK_U ;
+    pos base uniA80DA806A821
+         <anchor 776 1160> mark @MARK_U ;
+    pos base uniA80EA806A81B
+         <anchor 1099 1160> mark @MARK_U ;
+    pos base uni00A0
+         <anchor 195 1092> mark @MARK_U ;
+    pos base uni2000
+         <anchor 375 1092> mark @MARK_U ;
+    pos base uni2001
+         <anchor 750 1092> mark @MARK_U ;
+    pos base uni2002
+         <anchor 375 1092> mark @MARK_U ;
+    pos base uni2003
+         <anchor 750 1092> mark @MARK_U ;
+    pos base uni2004
+         <anchor 250 1092> mark @MARK_U ;
+    pos base uni2005
+         <anchor 188 1092> mark @MARK_U ;
+    pos base uni2006
+         <anchor 125 1092> mark @MARK_U ;
+    pos base uni2007
+         <anchor 390 1092> mark @MARK_U ;
+    pos base uni2008
+         <anchor 218 1092> mark @MARK_U ;
+    pos base uni2009
+         <anchor 150 1092> mark @MARK_U ;
+    pos base uni200A
+         <anchor 15 1092> mark @MARK_U ;
+    pos base uni202F
+         <anchor 188 1092> mark @MARK_U ;
+} UDias;
+
+lookup LDias {
+  lookupflag 0 ;
+    #  subrule of type ATTACH
+    pos base uniA800
+         <anchor 1303 -150> mark @MARK_L ;
+    pos base uniA801
+         <anchor 416 -150> mark @MARK_L ;
+    pos base uniA803
+         <anchor 623 -150> mark @MARK_L ;
+    pos base uniA804
+         <anchor 277 -150> mark @MARK_L ;
+    pos base uniA805
+         <anchor 730 -150> mark @MARK_L ;
+    pos base uniA807
+         <anchor 1274 -150> mark @MARK_L ;
+    pos base uniA808
+         <anchor 1303 -150> mark @MARK_L ;
+    pos base uniA809
+         <anchor 909 -150> mark @MARK_L ;
+    pos base uniA80A
+         <anchor 774 -150> mark @MARK_L ;
+    pos base uniA80C
+         <anchor 823 -150> mark @MARK_L ;
+    pos base uniA80D
+         <anchor 775 -150> mark @MARK_L ;
+    pos base uniA80E
+         <anchor 1099 -150> mark @MARK_L ;
+    pos base uniA80F
+         <anchor 753 -150> mark @MARK_L ;
+    pos base uniA810
+         <anchor 525 -150> mark @MARK_L ;
+    pos base uniA811
+         <anchor 436 -150> mark @MARK_L ;
+    pos base uniA812
+         <anchor 657 -150> mark @MARK_L ;
+    pos base uniA813
+         <anchor 465 -150> mark @MARK_L ;
+    pos base uniA814
+         <anchor 817 -150> mark @MARK_L ;
+    pos base uniA815
+         <anchor 1230 -150> mark @MARK_L ;
+    pos base uniA816
+         <anchor 302 -150> mark @MARK_L ;
+    pos base uniA817
+         <anchor 1137 -150> mark @MARK_L ;
+    pos base uniA818
+         <anchor 871 -150> mark @MARK_L ;
+    pos base uniA819
+         <anchor 1235 -150> mark @MARK_L ;
+    pos base uniA81A
+         <anchor 1235 -150> mark @MARK_L ;
+    pos base uniA81B
+         <anchor 728 -150> mark @MARK_L ;
+    pos base uniA81C
+         <anchor 996 -150> mark @MARK_L ;
+    pos base uniA81D
+         <anchor 894 -150> mark @MARK_L ;
+    pos base uniA81E
+         <anchor 831 -150> mark @MARK_L ;
+    pos base uniA81F
+         <anchor 832 -150> mark @MARK_L ;
+    pos base uniA820
+         <anchor 460 -150> mark @MARK_L ;
+    pos base uniA821
+         <anchor 1109 -150> mark @MARK_L ;
+    pos base uniA822
+         <anchor 1238 -150> mark @MARK_L ;
+    pos base uniA823
+         <anchor 281 -150> mark @MARK_L ;
+    pos base uniA824
+         <anchor 274 -150> mark @MARK_L ;
+    pos base uniA807A806A807
+         <anchor 1116 -150> mark @MARK_L ;
+    pos base uniA807A806A808
+         <anchor 1155 -150> mark @MARK_L ;
+    pos base uniA807A806A810
+         <anchor 1264 -150> mark @MARK_L ;
+    pos base uniA807A806A814
+         <anchor 1160 -150> mark @MARK_L ;
+    pos base uniA807A806A81E
+         <anchor 1337 -150> mark @MARK_L ;
+    pos base uniA807A806A81F
+         <anchor 1337 -150> mark @MARK_L ;
+    pos base uniA807A806A821
+         <anchor 1221 -150> mark @MARK_L ;
+    pos base uniA808A806A814
+         <anchor 1301 -150> mark @MARK_L ;
+    pos base uniA808A806A81B
+         <anchor 1300 -150> mark @MARK_L ;
+    pos base uniA809A806A818
+         <anchor 1023 -150> mark @MARK_L ;
+    pos base uniA80CA806A80C
+         <anchor 1546 -150> mark @MARK_L ;
+    pos base uniA80CA806A80D
+         <anchor 1181 -150> mark @MARK_L ;
+    pos base uniA80DA806A815
+         <anchor 1065 -150> mark @MARK_L ;
+    pos base uniA80EA806A80E
+         <anchor 1212 -150> mark @MARK_L ;
+    pos base uniA814A806A814
+         <anchor 884 -150> mark @MARK_L ;
+    pos base uniA814A806A815
+         <anchor 931 -109> mark @MARK_L ;
+    pos base uniA814A806A81E
+         <anchor 844 -150> mark @MARK_L ;
+    pos base uniA816A806A816
+         <anchor 290 -150> mark @MARK_L ;
+    pos base uniA818A806A807
+         <anchor 1869 -150> mark @MARK_L ;
+    pos base uniA818A806A809
+         <anchor 1400 -150> mark @MARK_L ;
+    pos base uniA818A806A80C
+         <anchor 1056 -150> mark @MARK_L ;
+    pos base uniA818A806A80D
+         <anchor 1346 -143> mark @MARK_L ;
+    pos base uniA818A806A80E
+         <anchor 1152 -150> mark @MARK_L ;
+    pos base uniA818A806A810
+         <anchor 1065 -150> mark @MARK_L ;
+    pos base uniA818A806A812
+         <anchor 1052 -150> mark @MARK_L ;
+    pos base uniA818A806A814
+         <anchor 1034 -150> mark @MARK_L ;
+    pos base uniA818A806A816
+         <anchor 868 -150> mark @MARK_L ;
+    pos base uniA818A806A817
+         <anchor 1751 -150> mark @MARK_L ;
+    pos base uniA818A806A818
+         <anchor 1055 -150> mark @MARK_L ;
+    pos base uniA818A806A821
+         <anchor 1226 -150> mark @MARK_L ;
+    pos base uniA819A806A80D
+         <anchor 1714 -150> mark @MARK_L ;
+    pos base uniA819A806A810
+         <anchor 1329 -150> mark @MARK_L ;
+    pos base uniA819A806A814
+         <anchor 1233 -121> mark @MARK_L ;
+    pos base uniA819A806A819
+         <anchor 1233 -150> mark @MARK_L ;
+    pos base uniA819A806A821
+         <anchor 1239 -150> mark @MARK_L ;
+    pos base uniA81AA806A80D
+         <anchor 1237 -150> mark @MARK_L ;
+    pos base uniA81BA806A816
+         <anchor 708 -150> mark @MARK_L ;
+    pos base uniA81BA806A81B
+         <anchor 707 -150> mark @MARK_L ;
+    pos base uniA81DA806A819
+         <anchor 1803 -150> mark @MARK_L ;
+    pos base uniA81DA806A81B
+         <anchor 1225 -150> mark @MARK_L ;
+    pos base uniA81DA806A81D
+         <anchor 1135 -150> mark @MARK_L ;
+    pos base uniA81FA806A81F
+         <anchor 900 -150> mark @MARK_L ;
+    pos base uniA821A806A807
+         <anchor 1820 -150> mark @MARK_L ;
+    pos base uniA821A806A80C
+         <anchor 1337 -150> mark @MARK_L ;
+    pos base uniA821A806A80D
+         <anchor 1477 -150> mark @MARK_L ;
+    pos base uniA821A806A810
+         <anchor 1062 -150> mark @MARK_L ;
+    pos base uniA821A806A811
+         <anchor 967 -150> mark @MARK_L ;
+    pos base uniA821A806A814
+         <anchor 1271 -150> mark @MARK_L ;
+    pos base uniA821A806A815
+         <anchor 1207 -150> mark @MARK_L ;
+    pos base uniA821A806A81B
+         <anchor 1234 -150> mark @MARK_L ;
+    pos base uniA807A806A807.alt
+         <anchor 1281 -150> mark @MARK_L ;
+    pos base uniA809A806A809
+         <anchor 1462 -150> mark @MARK_L ;
+    pos base uniA821A806A821
+         <anchor 1270 -150> mark @MARK_L ;
+    pos base uniA810A806A810
+         <anchor 504 -150> mark @MARK_L ;
+    pos base uniA816A806A81E
+         <anchor 302 -280> mark @MARK_L ;
+    pos base uniA81AA806A814
+         <anchor 1235 -150> mark @MARK_L ;
+    pos base uniA81AA806A81E
+         <anchor 1235 -150> mark @MARK_L ;
+    pos base uniA81AA806A81F
+         <anchor 1235 -150> mark @MARK_L ;
+    pos base uniA81AA806A821
+         <anchor 1235 -150> mark @MARK_L ;
+    pos base uniA81EA806A80A
+         <anchor 831 -150> mark @MARK_L ;
+    pos base uniA81EA806A814
+         <anchor 831 -150> mark @MARK_L ;
+    pos base uniA81EA806A815
+         <anchor 831 -150> mark @MARK_L ;
+    pos base uniA81EA806A818
+         <anchor 831 -150> mark @MARK_L ;
+    pos base uniA81EA806A81B
+         <anchor 831 -150> mark @MARK_L ;
+    pos base uniA81EA806A81C
+         <anchor 831 -150> mark @MARK_L ;
+    pos base uniA81EA806A80C
+         <anchor 831 -150> mark @MARK_L ;
+    pos base uniA81EA806A812
+         <anchor 831 -150> mark @MARK_L ;
+    pos base uniA80DA806A814
+         <anchor 775 -150> mark @MARK_L ;
+    pos base uniA80DA806A81E
+         <anchor 775 -150> mark @MARK_L ;
+    pos base uniA80DA806A81F
+         <anchor 775 -150> mark @MARK_L ;
+    pos base uniA80DA806A821
+         <anchor 775 -150> mark @MARK_L ;
+    pos base uniA80EA806A81B
+         <anchor 1099 -150> mark @MARK_L ;
+    pos base uni00A0
+         <anchor 195 -76> mark @MARK_L ;
+    pos base uni2000
+         <anchor 375 -76> mark @MARK_L ;
+    pos base uni2001
+         <anchor 750 -76> mark @MARK_L ;
+    pos base uni2002
+         <anchor 375 -76> mark @MARK_L ;
+    pos base uni2003
+         <anchor 750 -76> mark @MARK_L ;
+    pos base uni2004
+         <anchor 250 -76> mark @MARK_L ;
+    pos base uni2005
+         <anchor 188 -76> mark @MARK_L ;
+    pos base uni2006
+         <anchor 125 -76> mark @MARK_L ;
+    pos base uni2007
+         <anchor 390 -76> mark @MARK_L ;
+    pos base uni2008
+         <anchor 218 -76> mark @MARK_L ;
+    pos base uni2009
+         <anchor 150 -76> mark @MARK_L ;
+    pos base uni200A
+         <anchor 15 -76> mark @MARK_L ;
+    pos base uni202F
+         <anchor 188 -76> mark @MARK_L ;
+} LDias;
+
+
+#**********************************
+#  Features
+#**********************************
+
+feature blwf {  # Below-Base Forms
+    script DFLT;  # Default
+        language dflt;  # Default
+            lookup DoUkarTrls;
+            lookup DoUkar;
+            lookup LeftUkar;
+    script sylo;  # Syloti Nagri
+        language dflt;  # Default
+            lookup DoUkarTrls;
+            lookup DoUkar;
+            lookup LeftUkar;
+} blwf ;
+
+feature cjct {  # Conjunct Forms
+    script DFLT;  # Default
+        language dflt;  # Default
+            lookup ConjunctForms;
+    script sylo;  # Syloti Nagri
+        language dflt;  # Default
+            lookup ConjunctForms;
+} cjct ;
+
+feature dist {  # Distances
+    script DFLT;  # Default
+        language dflt;  # Default
+            lookup DoUkarAdj;
+            lookup LeftUkarAdj;
+            lookup THalfAdj;
+            lookup THalfUkarAdj;
+            lookup DoComma;
+    script sylo;  # Syloti Nagri
+        language dflt;  # Default
+            lookup DoUkarAdj;
+            lookup LeftUkarAdj;
+            lookup THalfAdj;
+            lookup THalfUkarAdj;
+            lookup DoComma;
+} dist ;
+
+feature half {  # Half Forms
+    script DFLT;  # Default
+        language dflt;  # Default
+            lookup HalfForms;
+            lookup RoHalf;
+            lookup RoPre;
+    script sylo;  # Syloti Nagri
+        language dflt;  # Default
+            lookup HalfForms;
+            lookup RoHalf;
+            lookup RoPre;
+} half ;
+
+feature liga {  # Standard Ligatures
+    script DFLT;  # Default
+        language dflt;  # Default
+            lookup MarkLigs;
+    script sylo;  # Syloti Nagri
+        language dflt;  # Default
+            lookup MarkLigs;
+} liga ;
+
+feature mark {  # Mark Positioning
+    script DFLT;  # Default
+        language dflt;  # Default
+            lookup UDias;
+            lookup LDias;
+    script sylo;  # Syloti Nagri
+        language dflt;  # Default
+            lookup UDias;
+            lookup LDias;
+} mark ;
+
+feature rclt {  # Required Contextual Alternates
+    script DFLT;  # Default
+        language dflt;  # Default
+            lookup FinalHalant;
+    script sylo;  # Syloti Nagri
+        language dflt;  # Default
+            lookup FinalHalant;
+} rclt ;
