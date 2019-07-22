@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uniA810A806A81E" format="2">
+  <advance width="832"/>
+  <anchor x="525" y="-150" name="L"/>
+  <anchor x="525" y="1160" name="U"/>
+  <outline>
+    <component base="uniA810"/>
+    <component base="uniA81E.half"/>
+  </outline>
+</glyph>

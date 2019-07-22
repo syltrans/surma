@@ -652,10 +652,16 @@
   <string>uniA_810.glif</string>
   <key>uniA810A806A810</key>
   <string>uniA_810A_806A_810.glif</string>
+  <key>uniA810A806A81E</key>
+  <string>uniA_810A_806A_81E_.glif</string>
   <key>uniA811</key>
   <string>uniA_811.glif</string>
   <key>uniA812</key>
   <string>uniA_812.glif</string>
+  <key>uniA812A806A812</key>
+  <string>uniA_812A_806A_812.glif</string>
+  <key>uniA812A806A81E</key>
+  <string>uniA_812A_806A_81E_.glif</string>
   <key>uniA813</key>
   <string>uniA_813.glif</string>
   <key>uniA814</key>
@@ -680,6 +686,8 @@
   <string>uniA_817.glif</string>
   <key>uniA818</key>
   <string>uniA_818.glif</string>
+  <key>uniA818.half</key>
+  <string>uniA_818.half.glif</string>
   <key>uniA818A806A807</key>
   <string>uniA_818A_806A_807.glif</string>
   <key>uniA818A806A809</key>
@@ -770,6 +778,12 @@
   <string>uniA_81F_.glif</string>
   <key>uniA81F.half</key>
   <string>uniA_81F_.half.glif</string>
+  <key>uniA81FA806A810</key>
+  <string>uniA_81F_A_806A_810.glif</string>
+  <key>uniA81FA806A812</key>
+  <string>uniA_81F_A_806A_812.glif</string>
+  <key>uniA81FA806A819</key>
+  <string>uniA_81F_A_806A_819.glif</string>
   <key>uniA81FA806A81F</key>
   <string>uniA_81F_A_806A_81F_.glif</string>
   <key>uniA820</key>
@@ -798,6 +812,8 @@
   <string>uniA_821A_806A_821.glif</string>
   <key>uniA822</key>
   <string>uniA_822.glif</string>
+  <key>uniA822A806A81E</key>
+  <string>uniA_822A_806A_81E_.glif</string>
   <key>uniA823</key>
   <string>uniA_823.glif</string>
   <key>uniA824</key>
