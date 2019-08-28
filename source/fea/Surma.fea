@@ -1,5 +1,6 @@
 #  FEA file for defining OpenType behaviour for the Surma font
 #  sps, 16-July-2019
+#  Add new conjuncts, sps, 29-Jul-2019
 
 
 #**********************************
@@ -37,13 +38,14 @@
     uniA81F uniA81FA806A81F uniA820 uniA821 uniA821A806A807 uniA821A806A80C uniA821A806A80D uniA821A806A810 uniA821A806A811		
     uniA821A806A814 uniA821A806A815 uniA821A806A81B uniA821A806A821 uniA822 uniA823 uniA824 uniA825 uniA825.Do uniA827 uniA827A80B		
     uniA828 uniA829 uniA82A uniA82B uniFE00 uniFE01 uniFE02 uniFE03 uniFE04 uniFE05 uniFE06 uniFE07 uniFE08 uniFE09 uniFE0A uniFE0B		
-    uniFE0C uniFE0D uniFE0E uniFE0F uniFEFF uniFFFC uniFFFD v w x y yacute ydieresis yen z zcaron zero ] ;	
+    uniFE0C uniFE0D uniFE0E uniFE0F uniFEFF uniFFFC uniFFFD v w x y yacute ydieresis yen z zcaron zero
+    uniA810A806A81E uniA812A806A812 uniA812A806A81E uniA81FA806A810 uniA81FA806A812 uniA81FA806A819 uniA822A806A81E ] ;	
 
 #  All mark glyphs (for GDEF table)
 #  Includes word-final hasant (uniA806.final) but not regular 'circumflex' hasant (uniA806)
-#  Includes subjoined t,r,l,s
+#  Includes subjoined t,n,r,l,s
 #  Does not include marks with width (vowel signs a, i, u and o) but includes .left version of u since it has no width
-@GDEF_marks = [ uniA802 uniA802A80B uniA806.final uniA80B uniA80B.left uniA814.half uniA81E.half uniA81F.half uniA821.half		
+@GDEF_marks = [ uniA802 uniA802A80B uniA806.final uniA80B uniA80B.left uniA814.half uniA818.half uniA81E.half uniA81F.half uniA821.half		
     uniA825.left uniA826 uniA826.left uniA826.mid uniA826A80B ] ;	
 
 table GDEF {
@@ -83,7 +85,8 @@ GlyphClassDef
     uniA821A806A811 uniA821A806A814 uniA821A806A815 uniA821A806A81B uniA807A806A807.alt uniA809A806A809 uniA821A806A821		
     uniA810A806A810 uniA816A806A81E uniA81AA806A814 uniA81AA806A81E uniA81AA806A81F uniA81AA806A821 uniA81EA806A80A uniA81EA806A814		
     uniA81EA806A815 uniA81EA806A818 uniA81EA806A81B uniA81EA806A81C uniA81EA806A80C uniA81EA806A812 uniA80DA806A814 uniA80DA806A81E		
-    uniA80DA806A81F uniA80DA806A821 uniA80EA806A81B  ] ;	
+    uniA80DA806A81F uniA80DA806A821 uniA80EA806A81B 
+    uniA810A806A81E uniA812A806A812 uniA812A806A81E uniA81FA806A810 uniA81FA806A812 uniA81FA806A819 uniA822A806A81E ] ;	
 
 #  Not actually needed - never called because all characters are listed explicitly in lookups LDias and UDias
 #  But according to Bob H, if we switch to FEAX we can replace all those rules in lookup UDias (and LDias) with 
@@ -100,10 +103,8 @@ GlyphClassDef
     uniA810A806A810 uniA816A806A81E uniA81AA806A814 uniA81AA806A81E uniA81AA806A81F uniA81AA806A821 uniA81EA806A80A uniA81EA806A814		
     uniA81EA806A815 uniA81EA806A818 uniA81EA806A81B uniA81EA806A81C uniA81EA806A80C uniA81EA806A812 uniA80DA806A814 uniA80DA806A81E		
     uniA80DA806A81F uniA80DA806A821 uniA80EA806A81B uni00A0 uni2000 uni2001 uni2002 uni2003 uni2004 uni2005 uni2006 uni2007 uni2008		
-    uni2009 uni200A uni202F  ] ;	
-
-#  Glyphs based on Do (uniA816). These take a special ukar (uniA825.do)
-@DoChars = [ uniA816 uniA816A806A816 uniA818A806A816 uniA81BA806A816 uniA816A806A81E  ] ;	
+    uni2009 uni200A uni202F
+    uniA810A806A81E uniA812A806A812 uniA812A806A81E uniA81FA806A810 uniA81FA806A812 uniA81FA806A819 uniA822A806A81E ] ;	
 
 #  Upper diacritics
 @UpperDias = [ uniA802 uniA80B uniA826 uniA826A80B uniA802A80B  ] ;	
@@ -111,23 +112,26 @@ GlyphClassDef
 #  The only lower diacritic is word-final hasanta. (But see note at @WBChars class.)
 @LowerDias = [ uniA806.final  ] ;	
 
+#  Glyphs based on Do (uniA816). Used in lookup DoComma for positioning comma
+@DoChars = [ uniA816 uniA816A806A816 uniA818A806A816 uniA81BA806A816 uniA816A806A81E  ] ;	
+
+#  Glyphs based on Do (U+A816) plus two more. These take a special form of ukar (uniA825.do)
+@TakesDoUkar = [ uniA816 uniA816A806A816 uniA818A806A816 uniA81BA806A816 uniA816A806A81E uniA81AA806A80D uniA80EA806A81B  ] ;	
+
 #  Glyphs where the subjoined half-ta clashes and needs to be moved down.
 #  (See lookup THalfAdj)
 @THalfAdj = [ uniA809 uniA80A uniA80C uniA80E uniA815 uniA816 uniA817 uniA81B uniA81C uniA81D  ] ;	
 
-#  Glyphs based on Do (U+A816). These take a special form of ukar (uniA825.do)
-@TakesDoUkar = [ uniA816 uniA816A806A816 uniA818A806A816 uniA81BA806A816 uniA816A806A81E uniA81AA806A80D uniA80EA806A81B  ] ;	
-
 #  Glyphs that take the left form of ukar (uniA825.left)
 @TakesLeftUkar = [ uniA80F uniA811 uniA812 uniA813 uniA81A uniA820 uniA818A806A812 uniA821A806A811 uniA81AA806A81E uniA81AA806A81F		
-    uniA81AA806A821  ] ;
+    uniA81AA806A821 uniA812A806A812 ] ;
 
-#  Subjoined forms of t, r, l and s. These act as marks on the base glyph
-@TrlsHalf = [ uniA814.half uniA81E.half uniA81F.half uniA821.half  ] ;	
+#  Subjoined forms of t, n, r, l and s. These act as marks on the base glyph
+@TrlsHalf = [ uniA814.half uniA818.half uniA81E.half uniA81F.half uniA821.half ] ;	
 
-#  Glyphs that take the subjoined form of t, r, l, s
+#  Glyphs that take the subjoined form of t, n, r, l, s
 @UseHalftrls = [ uniA800 uniA807 uniA808 uniA809 uniA80A uniA80C uniA80D uniA80E uniA814 uniA815 uniA816 uniA817 uniA818 uniA819		
-    uniA81A uniA81B uniA81C uniA81D uniA821  ] ;	
+    uniA81A uniA81B uniA81C uniA81D uniA821 uniA81FA806A819 ] ;	
 
 #  WordBreak characters. Word-final hasant should display as the Bangla form (uniA806.final, a short
 #  diagonal stroke below the character). We do that by looking for one of these WordBreak characters.
@@ -157,82 +161,92 @@ languagesystem sylo dflt ;
 
 lookup ConjunctForms {
   lookupflag 0 ;
-    sub uniA807 uniA806 uniA807 by uniA807A806A807 ;
-    sub uniA807 uniA806 uniA808 by uniA807A806A808 ;
-    sub uniA807 uniA806 uniA810 by uniA807A806A810 ;
-    sub uniA807 uniA806 uniA814 by uniA807A806A814 ;
-    sub uniA807 uniA806 uniA81E by uniA807A806A81E ;
-    sub uniA807 uniA806 uniA81F by uniA807A806A81F ;
-    sub uniA807 uniA806 uniA821 by uniA807A806A821 ;
-    sub uniA808 uniA806 uniA814 by uniA808A806A814 ;
-    sub uniA808 uniA806 uniA81B by uniA808A806A81B ;
-    sub uniA809 uniA806 uniA818 by uniA809A806A818 ;
-    sub uniA80C uniA806 uniA80C by uniA80CA806A80C ;
-    sub uniA80C uniA806 uniA80D by uniA80CA806A80D ;
-    sub uniA80D uniA806 uniA815 by uniA80DA806A815 ;
-    sub uniA80E uniA806 uniA80E by uniA80EA806A80E ;
-    sub uniA814 uniA806 uniA814 by uniA814A806A814 ;
-    sub uniA814 uniA806 uniA815 by uniA814A806A815 ;
-    sub uniA814 uniA806 uniA81E by uniA814A806A81E ;
-    sub uniA816 uniA806 uniA816 by uniA816A806A816 ;
-    sub uniA818 uniA806 uniA807 by uniA818A806A807 ;
-    sub uniA818 uniA806 uniA809 by uniA818A806A809 ;
-    sub uniA818 uniA806 uniA80C by uniA818A806A80C ;
-    sub uniA818 uniA806 uniA80D by uniA818A806A80D ;
-    sub uniA818 uniA806 uniA80E by uniA818A806A80E ;
-    sub uniA818 uniA806 uniA810 by uniA818A806A810 ;
-    sub uniA818 uniA806 uniA812 by uniA818A806A812 ;
-    sub uniA818 uniA806 uniA814 by uniA818A806A814 ;
-    sub uniA818 uniA806 uniA816 by uniA818A806A816 ;
-    sub uniA818 uniA806 uniA817 by uniA818A806A817 ;
-    sub uniA818 uniA806 uniA818 by uniA818A806A818 ;
-    sub uniA818 uniA806 uniA821 by uniA818A806A821 ;
-    sub uniA819 uniA806 uniA80D by uniA819A806A80D ;
-    sub uniA819 uniA806 uniA810 by uniA819A806A810 ;
-    sub uniA819 uniA806 uniA814 by uniA819A806A814 ;
-    sub uniA819 uniA806 uniA819 by uniA819A806A819 ;
-    sub uniA819 uniA806 uniA821 by uniA819A806A821 ;
-    sub uniA81A uniA806 uniA80D by uniA81AA806A80D ;
-    sub uniA81B uniA806 uniA816 by uniA81BA806A816 ;
-    sub uniA81B uniA806 uniA81B by uniA81BA806A81B ;
-    sub uniA81D uniA806 uniA819 by uniA81DA806A819 ;
-    sub uniA81D uniA806 uniA81B by uniA81DA806A81B ;
-    sub uniA81D uniA806 uniA81D by uniA81DA806A81D ;
-    sub uniA81F uniA806 uniA81F by uniA81FA806A81F ;
-    sub uniA821 uniA806 uniA807 by uniA821A806A807 ;
-    sub uniA821 uniA806 uniA80C by uniA821A806A80C ;
-    sub uniA821 uniA806 uniA80D by uniA821A806A80D ;
-    sub uniA821 uniA806 uniA810 by uniA821A806A810 ;
-    sub uniA821 uniA806 uniA811 by uniA821A806A811 ;
-    sub uniA821 uniA806 uniA814 by uniA821A806A814 ;
-    sub uniA821 uniA806 uniA815 by uniA821A806A815 ;
-    sub uniA821 uniA806 uniA81B by uniA821A806A81B ;
-    sub uniA809 uniA806 uniA809 by uniA809A806A809 ;
-    sub uniA810 uniA806 uniA810 by uniA810A806A810 ;
-    sub uniA821 uniA806 uniA821 by uniA821A806A821 ;
-    sub uniA816 uniA806 uniA81E by uniA816A806A81E ;
-    sub uniA81A uniA806 uniA814 by uniA81AA806A814 ;
-    sub uniA81A uniA806 uniA81E by uniA81AA806A81E ;
-    sub uniA81A uniA806 uniA81F by uniA81AA806A81F ;
-    sub uniA81A uniA806 uniA821 by uniA81AA806A821 ;
-    sub uniA81E uniA806 uniA80A by uniA81EA806A80A ;
-    sub uniA81E uniA806 uniA814 by uniA81EA806A814 ;
-    sub uniA81E uniA806 uniA815 by uniA81EA806A815 ;
-    sub uniA81E uniA806 uniA818 by uniA81EA806A818 ;
-    sub uniA81E uniA806 uniA81B by uniA81EA806A81B ;
-    sub uniA81E uniA806 uniA81C by uniA81EA806A81C ;
-    sub uniA81E uniA806 uniA80C by uniA81EA806A80C ;
-    sub uniA81E uniA806 uniA812 by uniA81EA806A812 ;
-    sub uniA80D uniA806 uniA814 by uniA80DA806A814 ;
-    sub uniA80D uniA806 uniA81E by uniA80DA806A81E ;
-    sub uniA80D uniA806 uniA81F by uniA80DA806A81F ;
-    sub uniA80D uniA806 uniA821 by uniA80DA806A821 ;
-    sub uniA80E uniA806 uniA81B by uniA80EA806A81B ;
+    sub uniA807 uniA806 uniA807 by uniA807A806A807 ;	# ko-ko 
+    sub uniA807 uniA806 uniA808 by uniA807A806A808 ;	# ko-kho
+    sub uniA807 uniA806 uniA810 by uniA807A806A810 ;	# ko-tto
+    sub uniA807 uniA806 uniA814 by uniA807A806A814 ;	# ko-to 
+    sub uniA807 uniA806 uniA81E by uniA807A806A81E ;	# ko-ro 
+    sub uniA807 uniA806 uniA81F by uniA807A806A81F ;	# ko-lo 
+    sub uniA807 uniA806 uniA821 by uniA807A806A821 ;	# ko-so 
+    sub uniA808 uniA806 uniA814 by uniA808A806A814 ;	# kho-to 
+    sub uniA808 uniA806 uniA81B by uniA808A806A81B ;	# kho-bo 
+    sub uniA809 uniA806 uniA818 by uniA809A806A818 ;	# go-no 
+    sub uniA80C uniA806 uniA80C by uniA80CA806A80C ;	# co-co 
+    sub uniA80C uniA806 uniA80D by uniA80CA806A80D ;	# co-cho 
+    sub uniA80D uniA806 uniA815 by uniA80DA806A815 ;	# cho-tho 
+    sub uniA80E uniA806 uniA80E by uniA80EA806A80E ;	# jo-jo 
+    sub uniA814 uniA806 uniA814 by uniA814A806A814 ;	# to-to 
+    sub uniA814 uniA806 uniA815 by uniA814A806A815 ;	# to-tho 
+    sub uniA814 uniA806 uniA81E by uniA814A806A81E ;	# to-ro 
+    sub uniA816 uniA806 uniA816 by uniA816A806A816 ;	# do-do 
+    sub uniA818 uniA806 uniA807 by uniA818A806A807 ;	# no-ko 
+    sub uniA818 uniA806 uniA809 by uniA818A806A809 ;	# no-go 
+    sub uniA818 uniA806 uniA80C by uniA818A806A80C ;	# no-co 
+    sub uniA818 uniA806 uniA80D by uniA818A806A80D ;	# no-cho 
+    sub uniA818 uniA806 uniA80E by uniA818A806A80E ;	# no-jo 
+    sub uniA818 uniA806 uniA810 by uniA818A806A810 ;	# no-tto 
+    sub uniA818 uniA806 uniA812 by uniA818A806A812 ;	# no-ddo 
+    sub uniA818 uniA806 uniA814 by uniA818A806A814 ;	# no-to 
+    sub uniA818 uniA806 uniA816 by uniA818A806A816 ;	# no-do 
+    sub uniA818 uniA806 uniA817 by uniA818A806A817 ;	# no-dho 
+    sub uniA818 uniA806 uniA818 by uniA818A806A818 ;	# no-no 
+    sub uniA818 uniA806 uniA821 by uniA818A806A821 ;	# no-so 
+    sub uniA819 uniA806 uniA80D by uniA819A806A80D ;	# po-cho 
+    sub uniA819 uniA806 uniA810 by uniA819A806A810 ;	# po-tto 
+    sub uniA819 uniA806 uniA814 by uniA819A806A814 ;	# po-to 
+    sub uniA819 uniA806 uniA819 by uniA819A806A819 ;	# po-po 
+    sub uniA819 uniA806 uniA821 by uniA819A806A821 ;	# po-so 
+    sub uniA81A uniA806 uniA80D by uniA81AA806A80D ;	# pho-cho 
+    sub uniA81B uniA806 uniA816 by uniA81BA806A816 ;	# bo-do 
+    sub uniA81B uniA806 uniA81B by uniA81BA806A81B ;	# bo-bo 
+    sub uniA81D uniA806 uniA819 by uniA81DA806A819 ;	# cho-po 
+    sub uniA81D uniA806 uniA81B by uniA81DA806A81B ;	# cho-bo 
+    sub uniA81D uniA806 uniA81D by uniA81DA806A81D ;	# cho-cho 
+    sub uniA81F uniA806 uniA81F by uniA81FA806A81F ;	# lo-lo 
+    sub uniA821 uniA806 uniA807 by uniA821A806A807 ;	# so-ko 
+    sub uniA821 uniA806 uniA80C by uniA821A806A80C ;	# so-co 
+    sub uniA821 uniA806 uniA80D by uniA821A806A80D ;	# so-cho 
+    sub uniA821 uniA806 uniA810 by uniA821A806A810 ;	# so-tto 
+    sub uniA821 uniA806 uniA811 by uniA821A806A811 ;	# so-ttho 
+    sub uniA821 uniA806 uniA814 by uniA821A806A814 ;	# so-to 
+    sub uniA821 uniA806 uniA815 by uniA821A806A815 ;	# so-tho 
+    sub uniA821 uniA806 uniA81B by uniA821A806A81B ;	# so-bo 
+    sub uniA809 uniA806 uniA809 by uniA809A806A809 ;	# go-go 
+    sub uniA810 uniA806 uniA810 by uniA810A806A810 ;	# tto-tto 
+    sub uniA821 uniA806 uniA821 by uniA821A806A821 ;	# so-so 
+    sub uniA816 uniA806 uniA81E by uniA816A806A81E ;	# do-ro 
+    sub uniA81A uniA806 uniA814 by uniA81AA806A814 ;	# pho-to 
+    sub uniA81A uniA806 uniA81E by uniA81AA806A81E ;	# pho-ro 
+    sub uniA81A uniA806 uniA81F by uniA81AA806A81F ;	# pho-lo 
+    sub uniA81A uniA806 uniA821 by uniA81AA806A821 ;	# pho-so 
+    sub uniA81E uniA806 uniA80A by uniA81EA806A80A ;	# ro-gho 
+    sub uniA81E uniA806 uniA814 by uniA81EA806A814 ;	# ro-to 
+    sub uniA81E uniA806 uniA815 by uniA81EA806A815 ;	# ro-tho 
+    sub uniA81E uniA806 uniA818 by uniA81EA806A818 ;	# ro-no 
+    sub uniA81E uniA806 uniA81B by uniA81EA806A81B ;	# ro-bo 
+    sub uniA81E uniA806 uniA81C by uniA81EA806A81C ;	# ro-bho 
+    sub uniA81E uniA806 uniA80C by uniA81EA806A80C ;	# ro-co 
+    sub uniA81E uniA806 uniA812 by uniA81EA806A812 ;	# ro-ddo 
+    sub uniA80D uniA806 uniA814 by uniA80DA806A814 ;	# cho-to 
+    sub uniA80D uniA806 uniA81E by uniA80DA806A81E ;	# cho-ro 
+    sub uniA80D uniA806 uniA81F by uniA80DA806A81F ;	# cho-lo 
+    sub uniA80D uniA806 uniA821 by uniA80DA806A821 ;	# cho-so 
+    sub uniA80E uniA806 uniA81B by uniA80EA806A81B ;	# jo-bo 
+
+# Added 29-Jul-109 sps:
+    sub uniA810 uniA806 uniA81E by uniA810A806A81E ;	# tto-ro 
+    sub uniA812 uniA806 uniA812 by uniA812A806A812 ;	# ddo-ddo 
+    sub uniA812 uniA806 uniA81E by uniA812A806A81E ;	# ddo-ro 
+    sub uniA81F uniA806 uniA810 by uniA81FA806A810 ;	# lo-tto 
+    sub uniA81F uniA806 uniA812 by uniA81FA806A812 ;	# lo-ddo 
+    sub uniA81F uniA806 uniA819 by uniA81FA806A819 ;	# lo-po 
+    sub uniA822 uniA806 uniA81E by uniA822A806A81E ;	# ho-ro 
 } ConjunctForms;
 
 lookup HalfForms_target {
   lookupflag 0 ;
     sub uniA806 uniA814 by uniA814.half ;
+    sub uniA806 uniA818 by uniA818.half ;
     sub uniA806 uniA81E by uniA81E.half ;
     sub uniA806 uniA81F by uniA81F.half ;
     sub uniA806 uniA821 by uniA821.half ;
@@ -240,10 +254,10 @@ lookup HalfForms_target {
 
 lookup HalfForms {
   lookupflag 0 ;
-    sub @UseHalftrls uniA806' lookup HalfForms_target [ uniA814 uniA81E uniA81F uniA821 ]'  ;
+    sub @UseHalftrls uniA806' lookup HalfForms_target [ uniA814 uniA818 uniA81E uniA81F uniA821 ]'  ;
 } HalfForms;
 
-#  Special ukar for glyphs based on Do, with subjoined t, r, l or s in between
+#  Special ukar for glyphs based on Do, with subjoined t, n, r, l or s in between
 #  This lookup must come before lookup DoUkar
 lookup DoUkarTrls {
   lookupflag 0 ;
@@ -581,6 +595,20 @@ lookup UDias {
          <anchor 15 1092> mark @MARK_U ;
     pos base uni202F
          <anchor 188 1092> mark @MARK_U ;
+    pos base uniA81FA806A810
+         <anchor 1065 1160> mark @MARK_U ;
+    pos base uniA81FA806A812
+         <anchor 1179 1160> mark @MARK_U ;
+    pos base uniA81FA806A819
+         <anchor 1794 1160> mark @MARK_U ;
+    pos base uniA810A806A81E
+         <anchor 525 1160> mark @MARK_U ;
+    pos base uniA812A806A81E
+         <anchor 656 1160> mark @MARK_U ;
+    pos base uniA812A806A812
+         <anchor 1840 1160> mark @MARK_U ;
+    pos base uniA822A806A81E
+         <anchor 1236 1160> mark @MARK_U ;
 } UDias;
 
 lookup LDias {
@@ -824,6 +852,20 @@ lookup LDias {
          <anchor 15 -76> mark @MARK_L ;
     pos base uni202F
          <anchor 188 -76> mark @MARK_L ;
+    pos base uniA81FA806A810
+         <anchor 1065 -150> mark @MARK_L ;
+    pos base uniA81FA806A812
+         <anchor 1180 -150> mark @MARK_L ;
+    pos base uniA81FA806A819
+         <anchor 1794 -150> mark @MARK_L ;
+    pos base uniA810A806A81E
+         <anchor 525 -150> mark @MARK_L ;
+    pos base uniA812A806A81E
+         <anchor 657 -150> mark @MARK_L ;
+    pos base uniA812A806A812
+         <anchor 1840 -150> mark @MARK_L ;
+    pos base uniA822A806A81E
+         <anchor 1236 -150> mark @MARK_L ;
 } LDias;
 
 

@@ -51,8 +51,6 @@ ga821 ga806 ga811 > _ _ ga821_a806_a811:(1 2 3);
 ga821 ga806 ga814 > _ _ ga821_a806_a814:(1 2 3);
 ga821 ga806 ga815 > _ _ ga821_a806_a815:(1 2 3);
 ga821 ga806 ga81b > _ _ ga821_a806_a81b:(1 2 3);
-
-/* new conjuncts that weren't in legacy font */
 ga809 ga806 ga809 > _ _ ga809_a806_a809:(1 2 3);
 ga810 ga806 ga810 > _ _ ga810_a806_a810:(1 2 3);
 ga821 ga806 ga821 > _ _ ga821_a806_a821:(1 2 3);
@@ -75,11 +73,22 @@ ga80d ga806 ga81f > _ _ ga80d_a806_a81f:(1 2 3);
 ga80d ga806 ga821 > _ _ ga80d_a806_a821:(1 2 3);
 ga80e ga806 ga81b > _ _ ga80e_a806_a81b:(1 2 3);
 
+/* added July 2019 */
+ga810 ga806 ga81e > _ _ ga810_a806_a81e:(1 2 3);
+ga812 ga806 ga812 > _ _ ga812_a806_a812:(1 2 3);
+ga812 ga806 ga81e > _ _ ga812_a806_a81e:(1 2 3);
+ga81f ga806 ga810 > _ _ ga81f_a806_a810:(1 2 3);
+ga81f ga806 ga812 > _ _ ga81f_a806_a812:(1 2 3);
+ga81f ga806 ga819 > _ _ ga81f_a806_a819:(1 2 3);
+ga822 ga806 ga81e > _ _ ga822_a806_a81e:(1 2 3);
+
+
 /* half forms */
 ga806 ga814 > _ ga814_half:(1 2) / c_UseHalfTrls _ _;
 ga806 ga81e > _ ga81e_half:(1 2) / c_UseHalfTrls _ _;
 ga806 ga81f > _ ga81f_half:(1 2) / c_UseHalfTrls _ _;
 ga806 ga821 > _ ga821_half:(1 2) / c_UseHalfTrls _ _;
+ga806 ga818 > _ ga818_half:(1 2) / c_UseHalfTrls _ _;	/* added July 2019 */
 
 /* stack double-ro */
 ga81e ga806 ga81e > _ ga81e ga81e_half:(1 2 3);
