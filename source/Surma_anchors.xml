@@ -987,10 +987,10 @@
 </glyph>
 <glyph PSName="uniA81C" GID="155" UID="A81C">
   <point type="L">
-    <location x="996" y="-150"/>
+    <location x="1116" y="-150"/>
   </point>
   <point type="U">
-    <location x="997" y="1160"/>
+    <location x="1117" y="1160"/>
   </point>
 </glyph>
 <glyph PSName="uniA81D" GID="156" UID="A81D">
@@ -3128,6 +3128,63 @@
   </point>
   <point type="U">
     <location x="1099" y="1160"/>
+  </point>
+</glyph>
+<glyph PSName="uniA810A806A81E">
+  <point type="L">
+    <location x="525" y="-150"/>
+  </point>
+  <point type="U">
+    <location x="525" y="1160"/>
+  </point>
+</glyph>
+<glyph PSName="uniA812A806A812">
+  <point type="L">
+    <location x="1841" y="-150"/>
+  </point>
+  <point type="U">
+    <location x="1840" y="1160"/>
+  </point>
+</glyph>
+<glyph PSName="uniA812A806A81E">
+  <point type="L">
+    <location x="657" y="-150"/>
+  </point>
+  <point type="U">
+    <location x="656" y="1160"/>
+  </point>
+</glyph>
+<glyph PSName="uniA818.half"/>
+<glyph PSName="uniA81FA806A810">
+  <point type="L">
+    <location x="1065" y="-150"/>
+  </point>
+  <point type="U">
+    <location x="1065" y="1160"/>
+  </point>
+</glyph>
+<glyph PSName="uniA81FA806A812">
+  <point type="L">
+    <location x="1180" y="-150"/>
+  </point>
+  <point type="U">
+    <location x="1179" y="1160"/>
+  </point>
+</glyph>
+<glyph PSName="uniA81FA806A819">
+  <point type="L">
+    <location x="1794" y="-150"/>
+  </point>
+  <point type="U">
+    <location x="1794" y="1160"/>
+  </point>
+</glyph>
+<glyph PSName="uniA822A806A81E">
+  <point type="L">
+    <location x="1238" y="-150"/>
+  </point>
+  <point type="U">
+    <location x="1236" y="1160"/>
   </point>
 </glyph>
 </font>
