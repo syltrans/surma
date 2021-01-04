@@ -102,18 +102,4 @@
       <point x="687" y="-73"/>
     </contour>
   </outline>
-  <lib>
-    <dict>
-      <key>com.schriftgestaltung.Glyphs.nodeUserData.0.42</key>
-      <dict>
-        <key>name</key>
-        <string>hr01</string>
-      </dict>
-      <key>com.schriftgestaltung.Glyphs.nodeUserData.2.8</key>
-      <dict>
-        <key>name</key>
-        <string>hr02</string>
-      </dict>
-    </dict>
-  </lib>
 </glyph>

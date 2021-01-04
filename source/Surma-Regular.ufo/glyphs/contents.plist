@@ -584,8 +584,6 @@
   <string>uniA_805.glif</string>
   <key>uniA806</key>
   <string>uniA_806.glif</string>
-  <key>uniA806.final</key>
-  <string>uniA_806.final.glif</string>
   <key>uniA807</key>
   <string>uniA_807.glif</string>
   <key>uniA807A806A807</key>
@@ -844,6 +842,8 @@
   <string>uniA_82A_.glif</string>
   <key>uniA82B</key>
   <string>uniA_82B_.glif</string>
+  <key>uniA82C</key>
+  <string>uniA_82C_.glif</string>
   <key>uniFE00</key>
   <string>uniF_E_00.glif</string>
   <key>uniFE01</key>

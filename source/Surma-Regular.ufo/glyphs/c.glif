@@ -44,13 +44,4 @@
       <point x="619" y="369" type="curve"/>
     </contour>
   </outline>
-  <lib>
-    <dict>
-      <key>com.schriftgestaltung.Glyphs.nodeUserData.0.20</key>
-      <dict>
-        <key>name</key>
-        <string>hr01</string>
-      </dict>
-    </dict>
-  </lib>
 </glyph>

@@ -72,23 +72,4 @@
       <point x="779" y="238"/>
     </contour>
   </outline>
-  <lib>
-    <dict>
-      <key>com.schriftgestaltung.Glyphs.nodeUserData.0.27</key>
-      <dict>
-        <key>name</key>
-        <string>hr01</string>
-      </dict>
-      <key>com.schriftgestaltung.Glyphs.nodeUserData.1.12</key>
-      <dict>
-        <key>name</key>
-        <string>hr03</string>
-      </dict>
-      <key>com.schriftgestaltung.Glyphs.nodeUserData.2.12</key>
-      <dict>
-        <key>name</key>
-        <string>hr04</string>
-      </dict>
-    </dict>
-  </lib>
 </glyph>
