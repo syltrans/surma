@@ -2,5 +2,15 @@
 
 # Uses pysilfont tools
 
-psfnormalize -p checkfix=fix source/Surma-Regular.ufo -l source/logs/normR.log
+# update psnames and sort order, which also normalizes it
+echo "-----Normalizing UFO..."
+echo "-----Updating production names..."
+psfsetpsnames -p checkfix=fix -i source/glyph_data.csv source/Surma-Regular.ufo -x
+
+echo "-----Updating glyph orders..."
+psfsetglyphorder --header sort_final -i source/glyph_data.csv source/Surma-Regular.ufo -x
+
+echo "-----Exporting anchors..."
 psfexportanchors -g source/Surma-Regular.ufo source/Surma_anchors.xml -l source/logs/exportanchors.log
+
+echo "-----Preflight completed!"

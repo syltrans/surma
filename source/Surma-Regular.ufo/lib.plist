@@ -84,6 +84,7 @@
     <string>.null</string>
     <string>CR</string>
     <string>space</string>
+    <string>exclam</string>
     <string>quotedbl</string>
     <string>numbersign</string>
     <string>dollar</string>
@@ -177,149 +178,14 @@
     <string>bar</string>
     <string>braceright</string>
     <string>asciitilde</string>
-    <string>sterling</string>
-    <string>currency</string>
-    <string>brokenbar</string>
-    <string>section</string>
-    <string>paragraph</string>
-    <string>uni0964</string>
-    <string>uni0965</string>
-    <string>uniA806.final</string>
-    <string>uni09E6</string>
-    <string>uni09E7</string>
-    <string>uni09E8</string>
-    <string>uni09E9</string>
-    <string>uni09EA</string>
-    <string>uni09EB</string>
-    <string>uni09EC</string>
-    <string>uni09ED</string>
-    <string>uni09EE</string>
-    <string>uni09EF</string>
-    <string>uni09F3</string>
-    <string>quoteleft</string>
-    <string>quoteright</string>
-    <string>quotedblleft</string>
-    <string>quotedblright</string>
-    <string>dagger</string>
-    <string>daggerdbl</string>
-    <string>perthousand</string>
-    <string>uni2055</string>
-    <string>minus</string>
-    <string>uniA800</string>
-    <string>uniA801</string>
-    <string>uniA802</string>
-    <string>uniA803</string>
-    <string>uniA804</string>
-    <string>uniA805</string>
-    <string>uniA806</string>
-    <string>uniA807</string>
-    <string>uniA808</string>
-    <string>uniA809</string>
-    <string>uniA80A</string>
-    <string>uniA80B</string>
-    <string>uniA80B.left</string>
-    <string>uniA80C</string>
-    <string>uniA80D</string>
-    <string>uniA80E</string>
-    <string>uniA80F</string>
-    <string>uniA810</string>
-    <string>uniA811</string>
-    <string>uniA812</string>
-    <string>uniA813</string>
-    <string>uniA814</string>
-    <string>uniA814.half</string>
-    <string>uniA815</string>
-    <string>uniA816</string>
-    <string>uniA817</string>
-    <string>uniA818</string>
-    <string>uniA819</string>
-    <string>uniA81A</string>
-    <string>uniA81B</string>
-    <string>uniA81C</string>
-    <string>uniA81D</string>
-    <string>uniA81E</string>
-    <string>uniA81E.half</string>
-    <string>uniA81F</string>
-    <string>uniA81F.half</string>
-    <string>uniA820</string>
-    <string>uniA821</string>
-    <string>uniA821.half</string>
-    <string>uniA822</string>
-    <string>uniA823</string>
-    <string>uniA824</string>
-    <string>uniA825</string>
-    <string>uniA825.Do</string>
-    <string>uniA825.left</string>
-    <string>uniA826</string>
-    <string>uniA826.left</string>
-    <string>uniA826.mid</string>
-    <string>uniA827</string>
-    <string>uniA828</string>
-    <string>uniA829</string>
-    <string>uniA82A</string>
-    <string>uniA82B</string>
-    <string>uniA807A806A807</string>
-    <string>uniA807A806A808</string>
-    <string>uniA807A806A810</string>
-    <string>uniA807A806A814</string>
-    <string>uniA807A806A81E</string>
-    <string>uniA807A806A81F</string>
-    <string>uniA807A806A821</string>
-    <string>uniA808A806A814</string>
-    <string>uniA808A806A81B</string>
-    <string>uniA809A806A818</string>
-    <string>uniA80CA806A80C</string>
-    <string>uniA80CA806A80D</string>
-    <string>uniA80DA806A815</string>
-    <string>uniA80EA806A80E</string>
-    <string>uniA814A806A814</string>
-    <string>uniA814A806A815</string>
-    <string>uniA814A806A81E</string>
-    <string>uniA816A806A816</string>
-    <string>uniA818A806A807</string>
-    <string>uniA818A806A809</string>
-    <string>uniA818A806A80C</string>
-    <string>uniA818A806A80D</string>
-    <string>uniA818A806A80E</string>
-    <string>uniA818A806A810</string>
-    <string>uniA818A806A812</string>
-    <string>uniA818A806A814</string>
-    <string>uniA818A806A816</string>
-    <string>uniA818A806A817</string>
-    <string>uniA818A806A818</string>
-    <string>uniA818A806A821</string>
-    <string>uniA819A806A80D</string>
-    <string>uniA819A806A810</string>
-    <string>uniA819A806A814</string>
-    <string>uniA819A806A819</string>
-    <string>uniA819A806A821</string>
-    <string>uniA81AA806A80D</string>
-    <string>uniA81BA806A816</string>
-    <string>uniA81BA806A81B</string>
-    <string>uniA81DA806A819</string>
-    <string>uniA81DA806A81B</string>
-    <string>uniA81DA806A81D</string>
-    <string>uniA81FA806A81F</string>
-    <string>uniA821A806A807</string>
-    <string>uniA821A806A80C</string>
-    <string>uniA821A806A80D</string>
-    <string>uniA821A806A810</string>
-    <string>uniA821A806A811</string>
-    <string>uniA821A806A814</string>
-    <string>uniA821A806A815</string>
-    <string>uniA821A806A81B</string>
-    <string>uniA807A806A807.alt</string>
-    <string>sylSpacer</string>
-    <string>exclam</string>
-    <string>uniA81E.pre</string>
-    <string>uniA827A80B</string>
-    <string>uniA809A806A809</string>
-    <string>uniA821A806A821</string>
-    <string>uniA810A806A810</string>
-    <string>cent</string>
     <string>uni00A0</string>
     <string>exclamdown</string>
+    <string>cent</string>
+    <string>sterling</string>
+    <string>currency</string>
     <string>yen</string>
+    <string>brokenbar</string>
+    <string>section</string>
     <string>dieresis</string>
     <string>copyright</string>
     <string>ordfeminine</string>
@@ -334,6 +200,7 @@
     <string>threesuperior</string>
     <string>acute</string>
     <string>mu</string>
+    <string>paragraph</string>
     <string>periodcentered</string>
     <string>cedilla</string>
     <string>onesuperior</string>
@@ -372,8 +239,8 @@
     <string>Uacute</string>
     <string>Ucircumflex</string>
     <string>Udieresis</string>
-    <string>Thorn</string>
     <string>Yacute</string>
+    <string>Thorn</string>
     <string>germandbls</string>
     <string>agrave</string>
     <string>aacute</string>
@@ -426,6 +293,52 @@
     <string>hungarumlaut</string>
     <string>uni03A9</string>
     <string>pi</string>
+    <string>figuredash</string>
+    <string>endash</string>
+    <string>emdash</string>
+    <string>uni2015</string>
+    <string>quoteleft</string>
+    <string>quoteright</string>
+    <string>quotesinglbase</string>
+    <string>quotedblleft</string>
+    <string>quotedblright</string>
+    <string>quotedblbase</string>
+    <string>dagger</string>
+    <string>daggerdbl</string>
+    <string>bullet</string>
+    <string>ellipsis</string>
+    <string>uni2027</string>
+    <string>uni2028</string>
+    <string>uni2029</string>
+    <string>uni202A</string>
+    <string>uni202B</string>
+    <string>uni202C</string>
+    <string>uni202D</string>
+    <string>uni202E</string>
+    <string>uni202F</string>
+    <string>perthousand</string>
+    <string>guilsinglleft</string>
+    <string>guilsinglright</string>
+    <string>fraction</string>
+    <string>uni2055</string>
+    <string>uni2060</string>
+    <string>Euro</string>
+    <string>trademark</string>
+    <string>partialdiff</string>
+    <string>Delta</string>
+    <string>product</string>
+    <string>summation</string>
+    <string>minus</string>
+    <string>uni2219</string>
+    <string>radical</string>
+    <string>infinity</string>
+    <string>integral</string>
+    <string>approxequal</string>
+    <string>notequal</string>
+    <string>lessequal</string>
+    <string>greaterequal</string>
+    <string>lozenge</string>
+    <string>uni25CC</string>
     <string>uni2000</string>
     <string>uni2001</string>
     <string>uni2002</string>
@@ -444,43 +357,159 @@
     <string>uni200F</string>
     <string>uni2010</string>
     <string>uni2011</string>
-    <string>figuredash</string>
-    <string>endash</string>
-    <string>emdash</string>
-    <string>uni2015</string>
-    <string>quotesinglbase</string>
-    <string>quotedblbase</string>
-    <string>bullet</string>
-    <string>ellipsis</string>
-    <string>uni2027</string>
-    <string>uni2028</string>
-    <string>uni2029</string>
-    <string>uni202A</string>
-    <string>uni202B</string>
-    <string>uni202C</string>
-    <string>uni202D</string>
-    <string>uni202E</string>
-    <string>uni202F</string>
-    <string>guilsinglleft</string>
-    <string>guilsinglright</string>
-    <string>fraction</string>
-    <string>uni2060</string>
-    <string>Euro</string>
-    <string>trademark</string>
-    <string>partialdiff</string>
-    <string>Delta</string>
-    <string>product</string>
-    <string>summation</string>
-    <string>uni2219</string>
-    <string>radical</string>
-    <string>infinity</string>
-    <string>integral</string>
-    <string>approxequal</string>
-    <string>notequal</string>
-    <string>lessequal</string>
-    <string>greaterequal</string>
-    <string>lozenge</string>
-    <string>uni25CC</string>
+    <string>uni0964</string>
+    <string>uni0965</string>
+    <string>uni09E6</string>
+    <string>uni09E7</string>
+    <string>uni09E8</string>
+    <string>uni09E9</string>
+    <string>uni09EA</string>
+    <string>uni09EB</string>
+    <string>uni09EC</string>
+    <string>uni09ED</string>
+    <string>uni09EE</string>
+    <string>uni09EF</string>
+    <string>uni09F3</string>
+    <string>uniA800</string>
+    <string>uniA801</string>
+    <string>uniA802</string>
+    <string>uniA803</string>
+    <string>uniA804</string>
+    <string>uniA805</string>
+    <string>uniA806</string>
+    <string>uniA807</string>
+    <string>uniA808</string>
+    <string>uniA809</string>
+    <string>uniA80A</string>
+    <string>uniA80B</string>
+    <string>uniA80C</string>
+    <string>uniA80D</string>
+    <string>uniA80E</string>
+    <string>uniA80F</string>
+    <string>uniA810</string>
+    <string>uniA811</string>
+    <string>uniA812</string>
+    <string>uniA813</string>
+    <string>uniA814</string>
+    <string>uniA815</string>
+    <string>uniA816</string>
+    <string>uniA817</string>
+    <string>uniA818</string>
+    <string>uniA819</string>
+    <string>uniA81A</string>
+    <string>uniA81B</string>
+    <string>uniA81C</string>
+    <string>uniA81D</string>
+    <string>uniA81E</string>
+    <string>uniA81F</string>
+    <string>uniA820</string>
+    <string>uniA821</string>
+    <string>uniA822</string>
+    <string>uniA823</string>
+    <string>uniA824</string>
+    <string>uniA825</string>
+    <string>uniA826</string>
+    <string>uniA827</string>
+    <string>uniA828</string>
+    <string>uniA829</string>
+    <string>uniA82A</string>
+    <string>uniA82B</string>
+    <string>uniA82C</string>
+    <string>sylSpacer</string>
+    <string>uniA802A80B</string>
+    <string>uniA807A806A807</string>
+    <string>uniA807A806A807.alt</string>
+    <string>uniA807A806A808</string>
+    <string>uniA807A806A810</string>
+    <string>uniA807A806A814</string>
+    <string>uniA807A806A818</string>
+    <string>uniA807A806A81E</string>
+    <string>uniA807A806A81F</string>
+    <string>uniA807A806A821</string>
+    <string>uniA808A806A814</string>
+    <string>uniA808A806A81B</string>
+    <string>uniA809A806A809</string>
+    <string>uniA809A806A818</string>
+    <string>uniA80B.left</string>
+    <string>uniA80CA806A80C</string>
+    <string>uniA80CA806A80D</string>
+    <string>uniA80DA806A814</string>
+    <string>uniA80DA806A815</string>
+    <string>uniA80DA806A81E</string>
+    <string>uniA80DA806A81F</string>
+    <string>uniA80DA806A821</string>
+    <string>uniA80EA806A80E</string>
+    <string>uniA80EA806A81B</string>
+    <string>uniA810A806A810</string>
+    <string>uniA810A806A81E</string>
+    <string>uniA812A806A812</string>
+    <string>uniA812A806A81E</string>
+    <string>uniA814.half</string>
+    <string>uniA814A806A814</string>
+    <string>uniA814A806A815</string>
+    <string>uniA814A806A81E</string>
+    <string>uniA816A806A816</string>
+    <string>uniA816A806A81E</string>
+    <string>uniA818.half</string>
+    <string>uniA818A806A807</string>
+    <string>uniA818A806A809</string>
+    <string>uniA818A806A80C</string>
+    <string>uniA818A806A80D</string>
+    <string>uniA818A806A80E</string>
+    <string>uniA818A806A810</string>
+    <string>uniA818A806A812</string>
+    <string>uniA818A806A814</string>
+    <string>uniA818A806A816</string>
+    <string>uniA818A806A817</string>
+    <string>uniA818A806A818</string>
+    <string>uniA818A806A821</string>
+    <string>uniA819A806A80D</string>
+    <string>uniA819A806A810</string>
+    <string>uniA819A806A814</string>
+    <string>uniA819A806A819</string>
+    <string>uniA819A806A821</string>
+    <string>uniA81AA806A80D</string>
+    <string>uniA81AA806A814</string>
+    <string>uniA81AA806A81E</string>
+    <string>uniA81AA806A81F</string>
+    <string>uniA81AA806A821</string>
+    <string>uniA81BA806A816</string>
+    <string>uniA81BA806A81B</string>
+    <string>uniA81DA806A819</string>
+    <string>uniA81DA806A81B</string>
+    <string>uniA81DA806A81D</string>
+    <string>uniA81E.half</string>
+    <string>uniA81E.pre</string>
+    <string>uniA81EA806A80A</string>
+    <string>uniA81EA806A80C</string>
+    <string>uniA81EA806A812</string>
+    <string>uniA81EA806A814</string>
+    <string>uniA81EA806A815</string>
+    <string>uniA81EA806A818</string>
+    <string>uniA81EA806A81B</string>
+    <string>uniA81EA806A81C</string>
+    <string>uniA81F.half</string>
+    <string>uniA81FA806A810</string>
+    <string>uniA81FA806A812</string>
+    <string>uniA81FA806A819</string>
+    <string>uniA81FA806A81F</string>
+    <string>uniA821.half</string>
+    <string>uniA821A806A807</string>
+    <string>uniA821A806A80C</string>
+    <string>uniA821A806A80D</string>
+    <string>uniA821A806A810</string>
+    <string>uniA821A806A811</string>
+    <string>uniA821A806A814</string>
+    <string>uniA821A806A815</string>
+    <string>uniA821A806A81B</string>
+    <string>uniA821A806A821</string>
+    <string>uniA822A806A81E</string>
+    <string>uniA825.Do</string>
+    <string>uniA825.left</string>
+    <string>uniA826.left</string>
+    <string>uniA826.mid</string>
+    <string>uniA826A80B</string>
+    <string>uniA827A80B</string>
     <string>fi</string>
     <string>fl</string>
     <string>uniFE00</string>
@@ -502,39 +531,10 @@
     <string>uniFEFF</string>
     <string>uniFFFC</string>
     <string>uniFFFD</string>
-    <string>uniA826A80B</string>
-    <string>uniA802A80B</string>
-    <string>uniA816A806A81E</string>
-    <string>uniA81AA806A814</string>
-    <string>uniA81AA806A81E</string>
-    <string>uniA81AA806A81F</string>
-    <string>uniA81AA806A821</string>
-    <string>uniA81EA806A80A</string>
-    <string>uniA81EA806A814</string>
-    <string>uniA81EA806A815</string>
-    <string>uniA81EA806A818</string>
-    <string>uniA81EA806A81B</string>
-    <string>uniA81EA806A81C</string>
-    <string>uniA81EA806A80C</string>
-    <string>uniA81EA806A812</string>
-    <string>uniA80DA806A814</string>
-    <string>uniA80DA806A81E</string>
-    <string>uniA80DA806A81F</string>
-    <string>uniA80DA806A821</string>
-    <string>uniA80EA806A81B</string>
+    <string>uniA812A806A812.alt2</string>
+    <string>uniA812A806A812.alt3</string>
+    <string>uniA812A806A812.alt4</string>
+    <string>uniA812A806A812.alt5</string>
   </array>
-  <key>public.postscriptNames</key>
-  <dict>
-    <key>Delta</key>
-    <string>uni0394</string>
-    <key>mu</key>
-    <string>uni03BC</string>
-    <key>onesuperior</key>
-    <string>uni00B9</string>
-    <key>threesuperior</key>
-    <string>uni00B3</string>
-    <key>twosuperior</key>
-    <string>uni00B2</string>
-  </dict>
 </dict>
 </plist>
