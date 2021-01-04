@@ -3125,6 +3125,14 @@
     <location x="1099" y="1160"/>
   </point>
 </glyph>
+<glyph PSName="uniA807A806A818">
+  <point type="L">
+    <location x="1264" y="-150"/>
+  </point>
+  <point type="U">
+    <location x="1164" y="1160"/>
+  </point>
+</glyph>
 <glyph PSName="uniA810A806A81E">
   <point type="L">
     <location x="525" y="-150"/>
@@ -3135,10 +3143,42 @@
 </glyph>
 <glyph PSName="uniA812A806A812">
   <point type="L">
-    <location x="1841" y="-150"/>
+    <location x="1359" y="-150"/>
   </point>
   <point type="U">
-    <location x="1840" y="1160"/>
+    <location x="1358" y="1160"/>
+  </point>
+</glyph>
+<glyph PSName="uniA812A806A812.alt2">
+  <point type="L">
+    <location x="657" y="-150"/>
+  </point>
+  <point type="U">
+    <location x="656" y="1160"/>
+  </point>
+</glyph>
+<glyph PSName="uniA812A806A812.alt3">
+  <point type="L">
+    <location x="657" y="-150"/>
+  </point>
+  <point type="U">
+    <location x="656" y="1160"/>
+  </point>
+</glyph>
+<glyph PSName="uniA812A806A812.alt4">
+  <point type="L">
+    <location x="1121" y="-150"/>
+  </point>
+  <point type="U">
+    <location x="1113" y="1160"/>
+  </point>
+</glyph>
+<glyph PSName="uniA812A806A812.alt5">
+  <point type="L">
+    <location x="657" y="-150"/>
+  </point>
+  <point type="U">
+    <location x="656" y="1160"/>
   </point>
 </glyph>
 <glyph PSName="uniA812A806A81E">

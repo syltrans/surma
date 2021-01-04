@@ -596,6 +596,8 @@
   <string>uniA_807A_806A_810.glif</string>
   <key>uniA807A806A814</key>
   <string>uniA_807A_806A_814.glif</string>
+  <key>uniA807A806A818</key>
+  <string>uniA_807A_806A_818.glif</string>
   <key>uniA807A806A81E</key>
   <string>uniA_807A_806A_81E_.glif</string>
   <key>uniA807A806A81F</key>
@@ -658,6 +660,14 @@
   <string>uniA_812.glif</string>
   <key>uniA812A806A812</key>
   <string>uniA_812A_806A_812.glif</string>
+  <key>uniA812A806A812.alt2</key>
+  <string>uniA_812A_806A_812.alt2.glif</string>
+  <key>uniA812A806A812.alt3</key>
+  <string>uniA_812A_806A_812.alt3.glif</string>
+  <key>uniA812A806A812.alt4</key>
+  <string>uniA_812A_806A_812.alt4.glif</string>
+  <key>uniA812A806A812.alt5</key>
+  <string>uniA_812A_806A_812.alt5.glif</string>
   <key>uniA812A806A81E</key>
   <string>uniA_812A_806A_81E_.glif</string>
   <key>uniA813</key>
