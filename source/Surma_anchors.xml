@@ -2685,10 +2685,10 @@
 </glyph>
 <glyph PSName="uniA812A806A812" GID="362">
   <point type="L">
-    <location x="1359" y="-150"/>
+    <location x="1227" y="-150"/>
   </point>
   <point type="U">
-    <location x="1358" y="1160"/>
+    <location x="1226" y="1160"/>
   </point>
 </glyph>
 <glyph PSName="uniA812A806A81E" GID="363">
@@ -3195,44 +3195,4 @@
 <glyph PSName="uniFEFF" GID="448" UID="FEFF"/>
 <glyph PSName="uniFFFC" GID="449" UID="FFFC"/>
 <glyph PSName="uniFFFD" GID="450" UID="FFFD"/>
-<glyph PSName="uniA812A806A812.alt2" GID="451">
-  <point type="L">
-    <location x="657" y="-150"/>
-  </point>
-  <point type="U">
-    <location x="656" y="1160"/>
-  </point>
-</glyph>
-<glyph PSName="uniA812A806A812.alt3" GID="452">
-  <point type="L">
-    <location x="657" y="-150"/>
-  </point>
-  <point type="U">
-    <location x="656" y="1160"/>
-  </point>
-</glyph>
-<glyph PSName="uniA812A806A812.alt4" GID="453">
-  <point type="L">
-    <location x="1121" y="-150"/>
-  </point>
-  <point type="U">
-    <location x="1113" y="1160"/>
-  </point>
-</glyph>
-<glyph PSName="uniA812A806A812.alt5" GID="454">
-  <point type="L">
-    <location x="657" y="-150"/>
-  </point>
-  <point type="U">
-    <location x="656" y="1160"/>
-  </point>
-</glyph>
-<glyph PSName="uniA812A806A812.alt6" GID="455">
-  <point type="L">
-    <location x="657" y="-150"/>
-  </point>
-  <point type="U">
-    <location x="656" y="1160"/>
-  </point>
-</glyph>
 </font>

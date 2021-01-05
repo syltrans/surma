@@ -14,6 +14,10 @@ psfsetpsnames -p checkfix=fix -i source/glyph_data.csv source/Surma-Regular.ufo 
 echo "-----Updating glyph orders..."
 psfsetglyphorder --header sort_final -i source/glyph_data.csv source/Surma-Regular.ufo -x
 
+# Fix problem with non-spacing marks due to glyphsLib bug
+echo "-----Restoring width to non-spacing marks..."
+psfremovegliflibkeys source/Surma-Regular.ufo com.schriftgestaltung.Glyphs.originalWidth  -l source/logs/widthfixR.log
+
 echo "-----Exporting anchors..."
 psfexportanchors -g source/Surma-Regular.ufo source/Surma_anchors.xml -l source/logs/exportanchors.log
 
