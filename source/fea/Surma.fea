@@ -1,6 +1,7 @@
 #  FEA file for defining OpenType behaviour for the Surma font
 #  sps, 16-July-2019
 #  Add new conjuncts, sps, 29-Jul-2019
+#  Add K+No conjunct, replace A806.final with new char A82C, sps 05-Jan-2021 
 
 
 #**********************************
@@ -42,11 +43,11 @@
     uniA810A806A81E uniA812A806A812 uniA812A806A81E uniA81FA806A810 uniA81FA806A812 uniA81FA806A819 uniA822A806A81E ] ;	
 
 #  All mark glyphs (for GDEF table)
-#  Includes word-final hasant (uniA806.final) but not regular 'circumflex' hasant (uniA806)
+#  Includes alternate hasant (uniA82C) but not regular 'circumflex' hasant (uniA806)
 #  Includes subjoined t,n,r,l,s
 #  Does not include marks with width (vowel signs a, i, u and o) but includes .left version of u since it has no width
-@GDEF_marks = [ uniA802 uniA802A80B uniA806.final uniA80B uniA80B.left uniA814.half uniA818.half uniA81E.half uniA81F.half uniA821.half		
-    uniA825.left uniA826 uniA826.left uniA826.mid uniA826A80B ] ;	
+@GDEF_marks = [ uniA802 uniA802A80B uniA80B uniA80B.left uniA814.half uniA818.half uniA81E.half uniA81F.half uniA821.half		
+    uniA825.left uniA826 uniA826.left uniA826.mid uniA826A80B uniA82C] ;	
 
 table GDEF {
 GlyphClassDef
@@ -65,8 +66,7 @@ GlyphClassDef
     markClass uniA80B <anchor -230 1160> @MARK_U ;
     markClass uniA826 <anchor -220 1160> @MARK_U ;
     markClass uniA826A80B <anchor -402 1160> @MARK_U ;
-    markClass uniA806.final <anchor -490 -150> @MARK_L ;
-#    markClass uniA806.final <anchor 0 0> @MARK_U ;	# commented out sps - not an upper mark
+    markClass uniA82C <anchor -490 -150> @MARK_L ;
 
 
 #**********************************
@@ -109,8 +109,8 @@ GlyphClassDef
 #  Upper diacritics
 @UpperDias = [ uniA802 uniA80B uniA826 uniA826A80B uniA802A80B  ] ;	
 
-#  The only lower diacritic is word-final hasanta. (But see note at @WBChars class.)
-@LowerDias = [ uniA806.final  ] ;	
+#  The only lower diacritic is Alternate hasanta. (But see note at @WBChars class.)
+@LowerDias = [ uniA82C  ] ;	
 
 #  Glyphs based on Do (uniA816). Used in lookup DoComma for positioning comma
 @DoChars = [ uniA816 uniA816A806A816 uniA818A806A816 uniA81BA806A816 uniA816A806A81E  ] ;	
@@ -133,19 +133,6 @@ GlyphClassDef
 @UseHalftrls = [ uniA800 uniA807 uniA808 uniA809 uniA80A uniA80C uniA80D uniA80E uniA814 uniA815 uniA816 uniA817 uniA818 uniA819		
     uniA81A uniA81B uniA81C uniA81D uniA821 uniA81FA806A819 ] ;	
 
-#  WordBreak characters. Word-final hasant should display as the Bangla form (uniA806.final, a short
-#  diagonal stroke below the character). We do that by looking for one of these WordBreak characters.
-#  Note that this list is incomplete (for example, it does not include punctuation like $ % or digits, 
-#  which are not expected to appear in normal text). A better way to do this would be to display the Bangla form
-#  everywhere except between two Nagri characters, then we wouldn't have to try to include all WB characters here.
-#  But there is currently (as of Jan 2019) a proposal before the UTC to encode a separate character for this.
-#  So we'll leave it like this for now, pending their decision.
-@WBChars = [ space exclam quotedbl quotesingle parenleft parenright plus comma hyphen period slash colon semicolon less equal		
-    greater question bracketleft bracketright braceleft braceright uni0964 uni0965 quoteleft quoteright quotedblleft quotedblright		
-    minus uniA828 uniA829 uniA82A uniA82B uni00A0 uni00AD guillemotleft guillemotright uni2000 uni2001 uni2002 uni2003 uni2004		
-    uni2005 uni2006 uni2007 uni2008 uni2009 uni200A uni200B uni2010 uni2011 figuredash endash emdash uni2015 uni202F guilsinglleft		
-    guilsinglright fraction uniFFFD  ] ;	
-
 
 #**********************************
 #  Language Systems
@@ -165,6 +152,7 @@ lookup ConjunctForms {
     sub uniA807 uniA806 uniA808 by uniA807A806A808 ;	# ko-kho
     sub uniA807 uniA806 uniA810 by uniA807A806A810 ;	# ko-tto
     sub uniA807 uniA806 uniA814 by uniA807A806A814 ;	# ko-to 
+    sub uniA807 uniA806 uniA818 by uniA807A806A818 ;	# ko-no 5-Jan-2021
     sub uniA807 uniA806 uniA81E by uniA807A806A81E ;	# ko-ro 
     sub uniA807 uniA806 uniA81F by uniA807A806A81F ;	# ko-lo 
     sub uniA807 uniA806 uniA821 by uniA807A806A821 ;	# ko-so 
@@ -233,7 +221,7 @@ lookup ConjunctForms {
     sub uniA80D uniA806 uniA821 by uniA80DA806A821 ;	# cho-so 
     sub uniA80E uniA806 uniA81B by uniA80EA806A81B ;	# jo-bo 
 
-# Added 29-Jul-109 sps:
+# Added 29-Jul-2019 sps:
     sub uniA810 uniA806 uniA81E by uniA810A806A81E ;	# tto-ro 
     sub uniA812 uniA806 uniA812 by uniA812A806A812 ;	# ddo-ddo 
     sub uniA812 uniA806 uniA81E by uniA812A806A81E ;	# ddo-ro 
@@ -294,12 +282,6 @@ lookup RoPre {
   lookupflag 0 ;
     sub uniA81E' lookup RoPre_target uniA806'  @BaseChars ;
 } RoPre;
-
-#  Use word-final halant before WordBreak characters
-lookup FinalHalant {
-  lookupflag 0 ;
-    sub uniA806' @WBChars by uniA806.final ;
-} FinalHalant;
 
 #  Ligatures for Upper marks combined with anusvara
 lookup MarkLigs {
@@ -433,6 +415,8 @@ lookup UDias {
          <anchor 1164 1160> mark @MARK_U ;
     pos base uniA807A806A814
          <anchor 1157 1160> mark @MARK_U ;
+    pos base uniA807A806A818
+         <anchor 1164 1160> mark @MARK_U ;
     pos base uniA807A806A81E
          <anchor 1338 1160> mark @MARK_U ;
     pos base uniA807A806A81F
@@ -690,6 +674,8 @@ lookup LDias {
          <anchor 1264 -150> mark @MARK_L ;
     pos base uniA807A806A814
          <anchor 1160 -150> mark @MARK_L ;
+    pos base uniA807A806A818
+         <anchor 1264 -150> mark @MARK_L ;
     pos base uniA807A806A81E
          <anchor 1337 -150> mark @MARK_L ;
     pos base uniA807A806A81F
@@ -944,12 +930,3 @@ feature mark {  # Mark Positioning
             lookup UDias;
             lookup LDias;
 } mark ;
-
-feature rclt {  # Required Contextual Alternates
-    script DFLT;  # Default
-        language dflt;  # Default
-            lookup FinalHalant;
-    script sylo;  # Syloti Nagri
-        language dflt;  # Default
-            lookup FinalHalant;
-} rclt ;
