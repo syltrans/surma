@@ -7,7 +7,7 @@
   <key>capHeight</key>
   <integer>1500</integer>
   <key>copyright</key>
-  <string>Copyright (c) 1999-2019 by Sylheti Translation And Research</string>
+  <string>Copyright (c) 1999-2021 by Sylheti Translation And Research</string>
   <key>descender</key>
   <integer>-650</integer>
   <key>familyName</key>
@@ -27,7 +27,7 @@
   <key>openTypeNameDesignerURL</key>
   <string>http://www.sylheti.org.uk/</string>
   <key>openTypeNameLicense</key>
-  <string>Copyright (c) 1999-2019, Sylheti Translation And Research (http://www.sylheti.org.uk/), with Reserved Font Name "Surma".
+  <string>Copyright (c) 1999-2021, Sylheti Translation And Research (http://www.sylheti.org.uk/), with Reserved Font Name "Surma".
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is copied below, and is also available with a FAQ at: http://scripts.sil.org/OFL
 
@@ -83,7 +83,7 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
   <key>openTypeNameUniqueID</key>
   <string>Sylheti Translation And Research: Surma Regular: 2021</string>
   <key>openTypeNameVersion</key>
-  <string>Version 3.900</string>
+  <string>Version 3.910</string>
   <key>openTypeOS2CodePageRanges</key>
   <array>
     <integer>0</integer>
@@ -137,6 +137,7 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
     <integer>16</integer>
     <integer>31</integer>
     <integer>38</integer>
+    <integer>100</integer>
   </array>
   <key>openTypeOS2VendorID</key>
   <string>STAR</string>
@@ -193,7 +194,7 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
   <key>versionMajor</key>
   <integer>3</integer>
   <key>versionMinor</key>
-  <integer>900</integer>
+  <integer>910</integer>
   <key>xHeight</key>
   <integer>900</integer>
 </dict>
