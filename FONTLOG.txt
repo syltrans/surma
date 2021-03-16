@@ -18,6 +18,15 @@ ChangeLog
 ---------
 (This should list both major and minor changes, most recent first.)
 
+16 Mar 2021 Surma version 3.910
+- Test version
+- Updated OpenType and Graphite behaviour
+- Added many new conjuncts and half-forms
+- Added support for U+A82C SYLOTI NAGRI SIGN ALTERNATE HASANTA
+- Improved some glyph widths
+- Switched to UFO-based font production workflow
+- Regular only
+
 16 Sep 2015 Surma version 3.0
 - First Unicode version released under the SIL Open Font License
 - Regular only
