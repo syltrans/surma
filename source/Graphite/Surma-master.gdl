@@ -59,7 +59,7 @@ c_TakesLeftUkar = (ga80f, ga811, ga812, ga813, ga81a, ga820, ga818_a806_a812, ga
 
 c_THalfAdj = (ga809, ga80a, ga80c, ga80e, ga815, ga816, ga817, ga81b, ga81c, ga81d)
 
-c_TrlsHalf = (ga814_half, ga81e_half, ga81f_half, ga821_half);
+c_TrlsHalf = (ga814_half, ga818_half, ga81e_half, ga81f_half, ga821_half);
 
 c_UseHalfTrls = (ga800, ga807, ga808, ga809, ga80a, ga80c, ga80d, ga80e, ga814, ga815, ga816, ga817, ga818, ga819, ga81a, ga81b,
                  ga81c, ga81d, ga821, ga81f_a806_a819);
