@@ -109,7 +109,7 @@ GlyphClassDef
 #  Upper diacritics
 @UpperDias = [ uniA802 uniA80B uniA826 uniA826A80B uniA802A80B  ] ;	
 
-#  The only lower diacritic is Alternate hasanta. (But see note at @WBChars class.)
+#  The only lower diacritic is Alternate hasanta.
 @LowerDias = [ uniA82C  ] ;	
 
 #  Glyphs based on Do (uniA816). Used in lookup DoComma for positioning comma
