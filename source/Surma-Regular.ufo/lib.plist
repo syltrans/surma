@@ -23,7 +23,7 @@
     </dict>
   </dict>
   <key>com.schriftgestaltung.appVersion</key>
-  <string>3048</string>
+  <string>3073</string>
   <key>com.schriftgestaltung.customParameter.GSFont.Axis Mappings</key>
   <dict>
     <key>XXXX</key>
@@ -435,6 +435,7 @@
     <string>uniA80CA806A80D</string>
     <string>uniA80DA806A814</string>
     <string>uniA80DA806A815</string>
+    <string>uniA80DA806A818</string>
     <string>uniA80DA806A81E</string>
     <string>uniA80DA806A81F</string>
     <string>uniA80DA806A821</string>
@@ -449,6 +450,7 @@
     <string>uniA814A806A815</string>
     <string>uniA814A806A81E</string>
     <string>uniA816A806A816</string>
+    <string>uniA816A806A818</string>
     <string>uniA816A806A81E</string>
     <string>uniA818.half</string>
     <string>uniA818A806A807</string>
@@ -470,6 +472,7 @@
     <string>uniA819A806A821</string>
     <string>uniA81AA806A80D</string>
     <string>uniA81AA806A814</string>
+    <string>uniA81AA806A818</string>
     <string>uniA81AA806A81E</string>
     <string>uniA81AA806A81F</string>
     <string>uniA81AA806A821</string>
