@@ -2,6 +2,7 @@
 #  sps, 16-July-2019
 #  Add new conjuncts, sps, 29-Jul-2019
 #  Add K+No conjunct, replace A806.final with new char A82C, sps 05-Jan-2021 
+#  Add conjuncts Cho+no, Pho+no, Do+no, Do+to, Do+so, sps 22-Mar-2021
 
 
 #**********************************
@@ -40,7 +41,8 @@
     uniA821A806A814 uniA821A806A815 uniA821A806A81B uniA821A806A821 uniA822 uniA823 uniA824 uniA825 uniA825.Do uniA827 uniA827A80B		
     uniA828 uniA829 uniA82A uniA82B uniFE00 uniFE01 uniFE02 uniFE03 uniFE04 uniFE05 uniFE06 uniFE07 uniFE08 uniFE09 uniFE0A uniFE0B		
     uniFE0C uniFE0D uniFE0E uniFE0F uniFEFF uniFFFC uniFFFD v w x y yacute ydieresis yen z zcaron zero
-    uniA810A806A81E uniA812A806A812 uniA812A806A81E uniA81FA806A810 uniA81FA806A812 uniA81FA806A819 uniA822A806A81E ] ;	
+    uniA810A806A81E uniA812A806A812 uniA812A806A81E uniA81FA806A810 uniA81FA806A812 uniA81FA806A819 uniA822A806A81E
+    uniA80DA806A818 uniA81AA806A818 uniA816A806A818 uniA816A806A814 uniA816A806A821 ] ;	
 
 #  All mark glyphs (for GDEF table)
 #  Includes alternate hasant (uniA82C) but not regular 'circumflex' hasant (uniA806)
@@ -86,7 +88,8 @@ GlyphClassDef
     uniA810A806A810 uniA816A806A81E uniA81AA806A814 uniA81AA806A81E uniA81AA806A81F uniA81AA806A821 uniA81EA806A80A uniA81EA806A814		
     uniA81EA806A815 uniA81EA806A818 uniA81EA806A81B uniA81EA806A81C uniA81EA806A80C uniA81EA806A812 uniA80DA806A814 uniA80DA806A81E		
     uniA80DA806A81F uniA80DA806A821 uniA80EA806A81B 
-    uniA810A806A81E uniA812A806A812 uniA812A806A81E uniA81FA806A810 uniA81FA806A812 uniA81FA806A819 uniA822A806A81E ] ;	
+    uniA810A806A81E uniA812A806A812 uniA812A806A81E uniA81FA806A810 uniA81FA806A812 uniA81FA806A819 uniA822A806A81E
+    uniA80DA806A818 uniA81AA806A818 uniA816A806A818 uniA816A806A814 uniA816A806A821 ] ;	
 
 #  Not actually needed - never called because all characters are listed explicitly in lookups LDias and UDias
 #  But according to Bob H, if we switch to FEAX we can replace all those rules in lookup UDias (and LDias) with 
@@ -104,7 +107,8 @@ GlyphClassDef
     uniA81EA806A815 uniA81EA806A818 uniA81EA806A81B uniA81EA806A81C uniA81EA806A80C uniA81EA806A812 uniA80DA806A814 uniA80DA806A81E		
     uniA80DA806A81F uniA80DA806A821 uniA80EA806A81B uni00A0 uni2000 uni2001 uni2002 uni2003 uni2004 uni2005 uni2006 uni2007 uni2008		
     uni2009 uni200A uni202F
-    uniA810A806A81E uniA812A806A812 uniA812A806A81E uniA81FA806A810 uniA81FA806A812 uniA81FA806A819 uniA822A806A81E ] ;	
+    uniA810A806A81E uniA812A806A812 uniA812A806A81E uniA81FA806A810 uniA81FA806A812 uniA81FA806A819 uniA822A806A81E
+    uniA80DA806A818 uniA81AA806A818 uniA816A806A818 uniA816A806A814 uniA816A806A821 ] ;	
 
 #  Upper diacritics
 @UpperDias = [ uniA802 uniA80B uniA826 uniA826A80B uniA802A80B  ] ;	
@@ -113,18 +117,19 @@ GlyphClassDef
 @LowerDias = [ uniA82C  ] ;	
 
 #  Glyphs based on Do (uniA816). Used in lookup DoComma for positioning comma
-@DoChars = [ uniA816 uniA816A806A816 uniA818A806A816 uniA81BA806A816 uniA816A806A81E  ] ;	
+@DoChars = [ uniA816 uniA816A806A816 uniA818A806A816 uniA81BA806A816 uniA816A806A81E uniA816A806A818 uniA816A806A814 uniA816A806A821 ] ;	
 
 #  Glyphs based on Do (U+A816) plus two more. These take a special form of ukar (uniA825.do)
-@TakesDoUkar = [ uniA816 uniA816A806A816 uniA818A806A816 uniA81BA806A816 uniA816A806A81E uniA81AA806A80D uniA80EA806A81B  ] ;	
+@TakesDoUkar = [ uniA816 uniA816A806A816 uniA818A806A816 uniA81BA806A816 uniA816A806A81E uniA81AA806A80D uniA80EA806A81B
+                 uniA816A806A818 uniA816A806A814 uniA816A806A821 ] ;	
 
 #  Glyphs where the subjoined half-ta clashes and needs to be moved down.
 #  (See lookup THalfAdj)
 @THalfAdj = [ uniA809 uniA80A uniA80C uniA80E uniA815 uniA816 uniA817 uniA81B uniA81C uniA81D  ] ;	
 
 #  Glyphs that take the left form of ukar (uniA825.left)
-@TakesLeftUkar = [ uniA80F uniA811 uniA812 uniA813 uniA81A uniA820 uniA818A806A812 uniA821A806A811 uniA81AA806A81E uniA81AA806A81F		
-    uniA81AA806A821 uniA812A806A812 ] ;
+@TakesLeftUkar = [ uniA80F uniA811 uniA812 uniA813 uniA81A uniA820 uniA818A806A812 uniA821A806A811 uniA81AA806A814 uniA81AA806A818
+    uniA81AA806A81E uniA81AA806A81F uniA81AA806A821 uniA812A806A812 ] ;
 
 #  Subjoined forms of t, n, r, l and s. These act as marks on the base glyph
 @TrlsHalf = [ uniA814.half uniA818.half uniA81E.half uniA81F.half uniA821.half ] ;	
@@ -229,6 +234,14 @@ lookup ConjunctForms {
     sub uniA81F uniA806 uniA812 by uniA81FA806A812 ;	# lo-ddo 
     sub uniA81F uniA806 uniA819 by uniA81FA806A819 ;	# lo-po 
     sub uniA822 uniA806 uniA81E by uniA822A806A81E ;	# ho-ro 
+
+# Added 22-Mar-2021 sps;
+    sub uniA80D uniA806 uniA818 by uniA80DA806A818 ;	# cho-no 
+    sub uniA81A uniA806 uniA818 by uniA81AA806A818 ;	# pho-no 
+    sub uniA816 uniA806 uniA818 by uniA816A806A818 ;	# do-no 
+    sub uniA816 uniA806 uniA814 by uniA816A806A814 ;	# do-to 
+    sub uniA816 uniA806 uniA821 by uniA816A806A821 ;	# do-so 
+
 } ConjunctForms;
 
 lookup HalfForms_target {

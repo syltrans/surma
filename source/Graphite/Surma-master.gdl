@@ -7,6 +7,10 @@
 /* sps 07-Jan-2021: */
 /* remove word-final halant handling and replace with new Unicode char A82C (Alternate Hasant)
 
+/* sps 24-Mar-2021: */
+/* add conjuncts Cho-No, Pho-No, Do-No and Do-To, Do-So */
+
+
 /* Define glyph classes */
 
 table(glyph)
@@ -25,7 +29,8 @@ c_BaseChars = (ga800, ga801, ga803, ga804, ga805, ga807, ga808, ga809,
     ga821_a806_a821, ga810_a806_a810, ga816_a806_a81e, ga81a_a806_a814, ga81a_a806_a81e,
     ga81a_a806_a81f, ga81a_a806_a821, ga81e_a806_a80a, ga81e_a806_a814, ga81e_a806_a815, ga81e_a806_a818, ga81e_a806_a81b, ga81e_a806_a81c,
     ga81e_a806_a80c, ga81e_a806_a812, ga80d_a806_a814, ga80d_a806_a81e, ga80d_a806_a81f, ga80d_a806_a821, ga80e_a806_a81b,
-    ga810_a806_a81e, ga812_a806_a812, ga812_a806_a81e, ga81f_a806_a810, ga81f_a806_a812, ga81f_a806_a819, ga822_a806_a81e);
+    ga810_a806_a81e, ga812_a806_a812, ga812_a806_a81e, ga81f_a806_a810, ga81f_a806_a812, ga81f_a806_a819, ga822_a806_a81e,
+    ga80d_a806_a818, ga81a_a806_a818, ga816_a806_a818, ga816_a806_a814, ga816_a806_a821);
 
 c_BaseCharsSP = (ga800, ga801, ga803, ga804, ga805, ga807, ga808, ga809,
     ga80a, ga80c, ga80d, ga80e, ga80f, ga810, ga811, ga812,
@@ -42,7 +47,8 @@ c_BaseCharsSP = (ga800, ga801, ga803, ga804, ga805, ga807, ga808, ga809,
     ga816_a806_a81e, ga81a_a806_a814, ga81a_a806_a81e,
     ga81a_a806_a81f, ga81a_a806_a821, ga81e_a806_a80a, ga81e_a806_a814, ga81e_a806_a815, ga81e_a806_a818, ga81e_a806_a81b, ga81e_a806_a81c,
     ga81e_a806_a80c, ga81e_a806_a812, ga80d_a806_a814, ga80d_a806_a81e, ga80d_a806_a81f, ga80d_a806_a821, ga80e_a806_a81b,
-    ga810_a806_a81e, ga812_a806_a812, ga812_a806_a81e, ga81f_a806_a810, ga81f_a806_a812, ga81f_a806_a819, ga822_a806_a81e);
+    ga810_a806_a81e, ga812_a806_a812, ga812_a806_a81e, ga81f_a806_a810, ga81f_a806_a812, ga81f_a806_a819, ga822_a806_a81e,
+    ga80d_a806_a818, ga81a_a806_a818, ga816_a806_a818, ga816_a806_a814, ga816_a806_a821);
 
 c_LDia = (ga82c);
 
@@ -50,11 +56,12 @@ c_UDia = (ga802, ga80b, ga826, ga826_a80b, ga802_a80b);
 
 c_Ukar = (ga825, ga825_do, ga825_left);
 
-c_DoChars = (ga816, ga816_a806_a816, ga818_a806_a816, ga81b_a806_a816, ga816_a806_a81e);
+c_DoChars = (ga816, ga816_a806_a816, ga818_a806_a816, ga81b_a806_a816, ga816_a806_a81e, ga816_a806_a818 ga816_a806_a814 ga816_a806_a821);
 
-c_TakesDoUkar = (ga816, ga816_a806_a816, ga818_a806_a816, ga81b_a806_a816, ga816_a806_a81e, ga81a_a806_a80d, ga80e_a806_a81b);
+c_TakesDoUkar = (ga816, ga816_a806_a816, ga818_a806_a816, ga81b_a806_a816, ga816_a806_a81e, ga81a_a806_a80d, ga80e_a806_a81b,
+                 ga816_a806_a818 ga816_a806_a814 ga816_a806_a821);
 
-c_TakesLeftUkar = (ga80f, ga811, ga812, ga813, ga81a, ga820, ga818_a806_a812, ga821_a806_a811, ga81a_a806_a81e, ga81a_a806_a81f,
+c_TakesLeftUkar = (ga80f, ga811, ga812, ga813, ga81a, ga820, ga818_a806_a812, ga821_a806_a811, ga81a_a806_a814, ga81a_a806_a818, ga81a_a806_a81e, ga81a_a806_a81f,
                    ga81a_a806_a821, ga812_a806_a812);
 
 c_THalfAdj = (ga809, ga80a, ga80c, ga80e, ga815, ga816, ga817, ga81b, ga81c, ga81d)
@@ -154,6 +161,12 @@ ga81f ga806 ga812 > _ _ ga81f_a806_a812:(1 2 3);
 ga81f ga806 ga819 > _ _ ga81f_a806_a819:(1 2 3);
 ga822 ga806 ga81e > _ _ ga822_a806_a81e:(1 2 3);
 
+/* Added March 2021 */
+ga80d ga806 ga818 > _ _ ga80d_a806_a818:(1 2 3);	/* cho-no */
+ga81a ga806 ga818 > _ _ ga81a_a806_a818:(1 2 3);	/* pho-no */
+ga816 ga806 ga818 > _ _ ga816_a806_a818:(1 2 3);	/* do-no */
+ga816 ga806 ga814 > _ _ ga816_a806_a814:(1 2 3);	/* do-to */
+ga816 ga806 ga821 > _ _ ga816_a806_a821:(1 2 3);	/* do-so */
 
 /* half forms */
 ga806 ga814 > _ ga814_half:(1 2) / c_UseHalfTrls _ _;
