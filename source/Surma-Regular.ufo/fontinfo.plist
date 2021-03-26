@@ -13,7 +13,7 @@
   <key>familyName</key>
   <string>Surma</string>
   <key>openTypeHeadCreated</key>
-  <string>2021/03/19 17:15:03</string>
+  <string>2021/03/26 12:26:21</string>
   <key>openTypeHheaAscender</key>
   <integer>1700</integer>
   <key>openTypeHheaDescender</key>
@@ -83,7 +83,7 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
   <key>openTypeNameUniqueID</key>
   <string>Sylheti Translation And Research: Surma Regular: 2021</string>
   <key>openTypeNameVersion</key>
-  <string>Version 3.910</string>
+  <string>Version 4.000</string>
   <key>openTypeOS2CodePageRanges</key>
   <array>
     <integer>0</integer>
@@ -192,9 +192,9 @@ THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
   <key>unitsPerEm</key>
   <integer>2048</integer>
   <key>versionMajor</key>
-  <integer>3</integer>
+  <integer>4</integer>
   <key>versionMinor</key>
-  <integer>910</integer>
+  <integer>0</integer>
   <key>xHeight</key>
   <integer>900</integer>
 </dict>

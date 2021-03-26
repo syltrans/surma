@@ -18,12 +18,12 @@ ChangeLog
 ---------
 (This should list both major and minor changes, most recent first.)
 
-16 Mar 2021 Surma version 3.910
-- Test version
+26 Mar 2021 Surma version 4.000
 - Updated OpenType and Graphite behaviour
 - Added many new conjuncts and half-forms
 - Added support for U+A82C SYLOTI NAGRI SIGN ALTERNATE HASANTA
 - Improved some glyph widths
+- Including WOFF and WOFF2 formats for web font use
 - Switched to UFO-based font production workflow
 - Regular only
 

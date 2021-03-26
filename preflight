@@ -13,4 +13,7 @@ psfsetglyphorder --header sort_final -i source/glyph_data.csv source/Surma-Regul
 echo "-----Exporting anchors..."
 psfexportanchors -g source/Surma-Regular.ufo source/Surma_anchors.xml -l source/logs/exportanchors.log
 
+echo "-----Updating woff metadata file..."
+psfmakewoffmetadata -q -n "Surma" -i "uk.org.sylheti" source/Surma-Regular.ufo
+
 echo "-----Preflight completed!"
