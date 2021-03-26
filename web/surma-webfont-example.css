@@ -1,0 +1,15 @@
+/* use Surma-Regular in .woff2 format */
+@font-face {
+  font-family: SurmaW;
+  src: url(Surma-Regular.woff2);
+}
+
+/* set body to use Surma format */
+body {
+  font-family: SurmaW, sans-serif;
+    /* fall back to sans serif so that it's really obvious if the fonts don't load */
+}
+/* remove bold styling from heading */
+h1 {
+  font-weight: normal;	
+}
